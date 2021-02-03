@@ -1,0 +1,2119 @@
+Namespace(batch_size=1, dataset='coco', disable_hybridization=False, epochs=60, gpus='0', log_interval=100, lr=0.0015, lr_decay=0.1, lr_decay_epoch='35,50,100,100', lr_warmup=-1, momentum=0.8, network='resnet50_v1b', num_workers=4, resume='', save_interval=1, save_prefix='logs\\60_0.0015_0.1_35-50-100-100_0.8_0.0001\\mask_rcnn_resnet50_v1b_coco', seed=233, start_epoch=0, static_alloc=False, use_fpn=False, val_interval=1, verbose=False, wd=0.0001)
+Start training from [Epoch 0]
+[Epoch 0][Batch 99], Speed: 3.379 samples/sec, RPN_Conf=0.514,RPN_SmoothL1=0.143,RCNN_CrossEntropy=0.683,RCNN_SmoothL1=0.534,RCNN_Mask=0.579,RPNAcc=0.746,RPNL1Loss=0.386,RCNNAcc=0.728,RCNNL1Loss=2.174,MaskAcc=0.705,MaskFGAcc=0.478
+[Epoch 0][Batch 199], Speed: 3.724 samples/sec, RPN_Conf=0.469,RPN_SmoothL1=0.145,RCNN_CrossEntropy=0.619,RCNN_SmoothL1=0.538,RCNN_Mask=0.577,RPNAcc=0.777,RPNL1Loss=0.384,RCNNAcc=0.740,RCNNL1Loss=2.226,MaskAcc=0.704,MaskFGAcc=0.479
+[Epoch 0] Training cost: 63.675, RPN_Conf=0.457,RPN_SmoothL1=0.144,RCNN_CrossEntropy=0.609,RCNN_SmoothL1=0.545,RCNN_Mask=0.570
+[Epoch 0] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.043
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.151
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.015
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.164
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.006
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.038
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.163
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.163
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=4.3
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.041
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.138
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.015
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.143
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.007
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.037
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.142
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.142
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=4.1
+[Epoch 0] mAP 4.1 higher than current best [0] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 0] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0000_4.1000.params
+[Epoch 1][Batch 99], Speed: 3.452 samples/sec, RPN_Conf=0.357,RPN_SmoothL1=0.135,RCNN_CrossEntropy=0.525,RCNN_SmoothL1=0.559,RCNN_Mask=0.512,RPNAcc=0.801,RPNL1Loss=0.374,RCNNAcc=0.746,RCNNL1Loss=2.264,MaskAcc=0.722,MaskFGAcc=0.479
+[Epoch 1][Batch 199], Speed: 3.627 samples/sec, RPN_Conf=0.333,RPN_SmoothL1=0.130,RCNN_CrossEntropy=0.522,RCNN_SmoothL1=0.560,RCNN_Mask=0.495,RPNAcc=0.816,RPNL1Loss=0.363,RCNNAcc=0.749,RCNNL1Loss=2.267,MaskAcc=0.735,MaskFGAcc=0.476
+[Epoch 1] Training cost: 63.747, RPN_Conf=0.328,RPN_SmoothL1=0.129,RCNN_CrossEntropy=0.521,RCNN_SmoothL1=0.559,RCNN_Mask=0.490
+[Epoch 1] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.105
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.343
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.026
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.253
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.007
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.062
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.253
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.253
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=10.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.112
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.340
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.042
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.251
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.008
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.064
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.251
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.251
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=11.2
+[Epoch 1] mAP 11.2 higher than current best [4.1] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 1] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0001_11.2000.params
+[Epoch 2][Batch 99], Speed: 3.615 samples/sec, RPN_Conf=0.284,RPN_SmoothL1=0.116,RCNN_CrossEntropy=0.502,RCNN_SmoothL1=0.553,RCNN_Mask=0.451,RPNAcc=0.831,RPNL1Loss=0.351,RCNNAcc=0.753,RCNNL1Loss=2.260,MaskAcc=0.748,MaskFGAcc=0.475
+[Epoch 2][Batch 199], Speed: 3.507 samples/sec, RPN_Conf=0.272,RPN_SmoothL1=0.119,RCNN_CrossEntropy=0.496,RCNN_SmoothL1=0.533,RCNN_Mask=0.442,RPNAcc=0.840,RPNL1Loss=0.344,RCNNAcc=0.756,RCNNL1Loss=2.236,MaskAcc=0.757,MaskFGAcc=0.474
+[Epoch 2] Training cost: 63.536, RPN_Conf=0.268,RPN_SmoothL1=0.116,RCNN_CrossEntropy=0.494,RCNN_SmoothL1=0.531,RCNN_Mask=0.441
+[Epoch 2] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.139
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.453
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.036
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.280
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.011
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.072
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.281
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.281
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=13.9
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.166
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.474
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.060
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.299
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.012
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.083
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.301
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.301
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=16.6
+[Epoch 2] mAP 16.6 higher than current best [11.2] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 2] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0002_16.6000.params
+[Epoch 3][Batch 99], Speed: 3.543 samples/sec, RPN_Conf=0.252,RPN_SmoothL1=0.116,RCNN_CrossEntropy=0.491,RCNN_SmoothL1=0.506,RCNN_Mask=0.428,RPNAcc=0.850,RPNL1Loss=0.336,RCNNAcc=0.758,RCNNL1Loss=2.209,MaskAcc=0.765,MaskFGAcc=0.474
+[Epoch 3][Batch 199], Speed: 3.582 samples/sec, RPN_Conf=0.242,RPN_SmoothL1=0.112,RCNN_CrossEntropy=0.487,RCNN_SmoothL1=0.498,RCNN_Mask=0.421,RPNAcc=0.856,RPNL1Loss=0.332,RCNNAcc=0.760,RCNNL1Loss=2.182,MaskAcc=0.770,MaskFGAcc=0.474
+[Epoch 3] Training cost: 63.688, RPN_Conf=0.242,RPN_SmoothL1=0.112,RCNN_CrossEntropy=0.486,RCNN_SmoothL1=0.494,RCNN_Mask=0.419
+[Epoch 3] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.200
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.551
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.090
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.339
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.011
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.089
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.339
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.339
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=20.0
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.218
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.130
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.351
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.098
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.350
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.350
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=21.8
+[Epoch 3] mAP 21.8 higher than current best [16.6] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 3] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0003_21.8000.params
+[Epoch 4][Batch 99], Speed: 3.401 samples/sec, RPN_Conf=0.224,RPN_SmoothL1=0.109,RCNN_CrossEntropy=0.471,RCNN_SmoothL1=0.443,RCNN_Mask=0.400,RPNAcc=0.863,RPNL1Loss=0.326,RCNNAcc=0.763,RCNNL1Loss=2.134,MaskAcc=0.777,MaskFGAcc=0.475
+[Epoch 4][Batch 199], Speed: 3.587 samples/sec, RPN_Conf=0.220,RPN_SmoothL1=0.109,RCNN_CrossEntropy=0.470,RCNN_SmoothL1=0.447,RCNN_Mask=0.403,RPNAcc=0.867,RPNL1Loss=0.322,RCNNAcc=0.765,RCNNL1Loss=2.107,MaskAcc=0.781,MaskFGAcc=0.475
+[Epoch 4] Training cost: 64.458, RPN_Conf=0.215,RPN_SmoothL1=0.107,RCNN_CrossEntropy=0.469,RCNN_SmoothL1=0.443,RCNN_Mask=0.403
+[Epoch 4] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.206
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.553
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.095
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.345
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.093
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.344
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.344
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=20.6
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.220
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.556
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.116
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.357
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.098
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.358
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.358
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=22.0
+[Epoch 4] mAP 22.0 higher than current best [21.8] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 4] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0004_22.0000.params
+[Epoch 5][Batch 99], Speed: 3.467 samples/sec, RPN_Conf=0.210,RPN_SmoothL1=0.104,RCNN_CrossEntropy=0.458,RCNN_SmoothL1=0.442,RCNN_Mask=0.408,RPNAcc=0.873,RPNL1Loss=0.317,RCNNAcc=0.767,RCNNL1Loss=2.072,MaskAcc=0.785,MaskFGAcc=0.475
+[Epoch 5][Batch 199], Speed: 3.673 samples/sec, RPN_Conf=0.205,RPN_SmoothL1=0.102,RCNN_CrossEntropy=0.453,RCNN_SmoothL1=0.427,RCNN_Mask=0.402,RPNAcc=0.876,RPNL1Loss=0.314,RCNNAcc=0.769,RCNNL1Loss=2.043,MaskAcc=0.788,MaskFGAcc=0.476
+[Epoch 5] Training cost: 64.122, RPN_Conf=0.208,RPN_SmoothL1=0.103,RCNN_CrossEntropy=0.454,RCNN_SmoothL1=0.429,RCNN_Mask=0.401
+[Epoch 5] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.238
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.604
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.133
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.374
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.102
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.375
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.375
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=23.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.253
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.605
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.164
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.382
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.106
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.382
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.382
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=25.3
+[Epoch 5] mAP 25.3 higher than current best [22.0] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 5] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0005_25.3000.params
+[Epoch 6][Batch 99], Speed: 3.502 samples/sec, RPN_Conf=0.190,RPN_SmoothL1=0.105,RCNN_CrossEntropy=0.453,RCNN_SmoothL1=0.404,RCNN_Mask=0.395,RPNAcc=0.880,RPNL1Loss=0.310,RCNNAcc=0.771,RCNNL1Loss=2.011,MaskAcc=0.791,MaskFGAcc=0.476
+[Epoch 6][Batch 199], Speed: 3.580 samples/sec, RPN_Conf=0.197,RPN_SmoothL1=0.103,RCNN_CrossEntropy=0.447,RCNN_SmoothL1=0.403,RCNN_Mask=0.394,RPNAcc=0.882,RPNL1Loss=0.307,RCNNAcc=0.773,RCNNL1Loss=1.986,MaskAcc=0.793,MaskFGAcc=0.476
+[Epoch 6] Training cost: 63.924, RPN_Conf=0.199,RPN_SmoothL1=0.102,RCNN_CrossEntropy=0.448,RCNN_SmoothL1=0.403,RCNN_Mask=0.395
+[Epoch 6] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.255
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.643
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.142
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.385
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.109
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.386
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.386
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=25.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.269
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.634
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.166
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.388
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.111
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.389
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.389
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=26.9
+[Epoch 6] mAP 26.9 higher than current best [25.3] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 6] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0006_26.9000.params
+[Epoch 7][Batch 99], Speed: 3.561 samples/sec, RPN_Conf=0.196,RPN_SmoothL1=0.101,RCNN_CrossEntropy=0.440,RCNN_SmoothL1=0.397,RCNN_Mask=0.394,RPNAcc=0.885,RPNL1Loss=0.304,RCNNAcc=0.775,RCNNL1Loss=1.959,MaskAcc=0.795,MaskFGAcc=0.477
+[Epoch 7][Batch 199], Speed: 3.559 samples/sec, RPN_Conf=0.192,RPN_SmoothL1=0.101,RCNN_CrossEntropy=0.446,RCNN_SmoothL1=0.392,RCNN_Mask=0.390,RPNAcc=0.888,RPNL1Loss=0.302,RCNNAcc=0.776,RCNNL1Loss=1.936,MaskAcc=0.797,MaskFGAcc=0.477
+[Epoch 7] Training cost: 64.279, RPN_Conf=0.193,RPN_SmoothL1=0.101,RCNN_CrossEntropy=0.448,RCNN_SmoothL1=0.392,RCNN_Mask=0.391
+[Epoch 7] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.228
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.596
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.108
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.360
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.101
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.359
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.359
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=22.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.225
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.593
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.112
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.347
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.101
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.346
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.346
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=22.5
+[Epoch 7] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0007_22.5000.params
+[Epoch 8][Batch 99], Speed: 3.421 samples/sec, RPN_Conf=0.201,RPN_SmoothL1=0.094,RCNN_CrossEntropy=0.432,RCNN_SmoothL1=0.391,RCNN_Mask=0.390,RPNAcc=0.890,RPNL1Loss=0.299,RCNNAcc=0.777,RCNNL1Loss=1.914,MaskAcc=0.799,MaskFGAcc=0.477
+[Epoch 8][Batch 199], Speed: 3.657 samples/sec, RPN_Conf=0.192,RPN_SmoothL1=0.097,RCNN_CrossEntropy=0.434,RCNN_SmoothL1=0.391,RCNN_Mask=0.385,RPNAcc=0.891,RPNL1Loss=0.297,RCNNAcc=0.779,RCNNL1Loss=1.897,MaskAcc=0.801,MaskFGAcc=0.477
+[Epoch 8] Training cost: 64.098, RPN_Conf=0.188,RPN_SmoothL1=0.096,RCNN_CrossEntropy=0.429,RCNN_SmoothL1=0.387,RCNN_Mask=0.383
+[Epoch 8] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.215
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.601
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.088
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.353
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.012
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.095
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.356
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.356
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=21.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.256
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.640
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.150
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.380
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.108
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.382
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.382
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=25.6
+[Epoch 8] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0008_25.6000.params
+[Epoch 9][Batch 99], Speed: 3.493 samples/sec, RPN_Conf=0.166,RPN_SmoothL1=0.097,RCNN_CrossEntropy=0.425,RCNN_SmoothL1=0.378,RCNN_Mask=0.377,RPNAcc=0.894,RPNL1Loss=0.294,RCNNAcc=0.780,RCNNL1Loss=1.874,MaskAcc=0.803,MaskFGAcc=0.478
+[Epoch 9][Batch 199], Speed: 3.523 samples/sec, RPN_Conf=0.178,RPN_SmoothL1=0.098,RCNN_CrossEntropy=0.423,RCNN_SmoothL1=0.370,RCNN_Mask=0.376,RPNAcc=0.895,RPNL1Loss=0.292,RCNNAcc=0.782,RCNNL1Loss=1.857,MaskAcc=0.804,MaskFGAcc=0.478
+[Epoch 9] Training cost: 64.375, RPN_Conf=0.179,RPN_SmoothL1=0.097,RCNN_CrossEntropy=0.421,RCNN_SmoothL1=0.373,RCNN_Mask=0.377
+[Epoch 9] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.202
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.609
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.078
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.319
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.094
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.324
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.324
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=20.2
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.229
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.607
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.118
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.333
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.103
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.336
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.336
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=22.9
+[Epoch 9] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0009_22.9000.params
+[Epoch 10][Batch 99], Speed: 3.442 samples/sec, RPN_Conf=0.185,RPN_SmoothL1=0.100,RCNN_CrossEntropy=0.433,RCNN_SmoothL1=0.361,RCNN_Mask=0.378,RPNAcc=0.897,RPNL1Loss=0.290,RCNNAcc=0.783,RCNNL1Loss=1.836,MaskAcc=0.806,MaskFGAcc=0.478
+[Epoch 10][Batch 199], Speed: 3.613 samples/sec, RPN_Conf=0.172,RPN_SmoothL1=0.093,RCNN_CrossEntropy=0.419,RCNN_SmoothL1=0.358,RCNN_Mask=0.371,RPNAcc=0.899,RPNL1Loss=0.288,RCNNAcc=0.784,RCNNL1Loss=1.821,MaskAcc=0.807,MaskFGAcc=0.478
+[Epoch 10] Training cost: 63.921, RPN_Conf=0.169,RPN_SmoothL1=0.093,RCNN_CrossEntropy=0.416,RCNN_SmoothL1=0.355,RCNN_Mask=0.370
+[Epoch 10] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.204
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.641
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.037
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.327
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.011
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.085
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.331
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.331
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=20.4
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.250
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.668
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.100
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.370
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.100
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.372
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.372
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=25.0
+[Epoch 10] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0010_25.0000.params
+[Epoch 11][Batch 99], Speed: 3.621 samples/sec, RPN_Conf=0.171,RPN_SmoothL1=0.094,RCNN_CrossEntropy=0.429,RCNN_SmoothL1=0.367,RCNN_Mask=0.378,RPNAcc=0.901,RPNL1Loss=0.286,RCNNAcc=0.785,RCNNL1Loss=1.803,MaskAcc=0.808,MaskFGAcc=0.478
+[Epoch 11][Batch 199], Speed: 3.572 samples/sec, RPN_Conf=0.172,RPN_SmoothL1=0.094,RCNN_CrossEntropy=0.421,RCNN_SmoothL1=0.362,RCNN_Mask=0.377,RPNAcc=0.902,RPNL1Loss=0.285,RCNNAcc=0.786,RCNNL1Loss=1.790,MaskAcc=0.809,MaskFGAcc=0.478
+[Epoch 11] Training cost: 63.308, RPN_Conf=0.171,RPN_SmoothL1=0.093,RCNN_CrossEntropy=0.420,RCNN_SmoothL1=0.360,RCNN_Mask=0.377
+[Epoch 11] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.248
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.672
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.105
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.362
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.105
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.368
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.368
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=24.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.279
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.684
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.159
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.383
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.113
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.388
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.388
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=27.9
+[Epoch 11] mAP 27.9 higher than current best [26.9] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 11] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0011_27.9000.params
+[Epoch 12][Batch 99], Speed: 3.424 samples/sec, RPN_Conf=0.167,RPN_SmoothL1=0.091,RCNN_CrossEntropy=0.404,RCNN_SmoothL1=0.327,RCNN_Mask=0.365,RPNAcc=0.903,RPNL1Loss=0.282,RCNNAcc=0.788,RCNNL1Loss=1.770,MaskAcc=0.811,MaskFGAcc=0.479
+[Epoch 12][Batch 199], Speed: 3.641 samples/sec, RPN_Conf=0.156,RPN_SmoothL1=0.088,RCNN_CrossEntropy=0.405,RCNN_SmoothL1=0.338,RCNN_Mask=0.366,RPNAcc=0.905,RPNL1Loss=0.280,RCNNAcc=0.788,RCNNL1Loss=1.758,MaskAcc=0.811,MaskFGAcc=0.479
+[Epoch 12] Training cost: 64.129, RPN_Conf=0.159,RPN_SmoothL1=0.088,RCNN_CrossEntropy=0.409,RCNN_SmoothL1=0.340,RCNN_Mask=0.367
+[Epoch 12] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.274
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.689
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.154
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.402
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.113
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.402
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.402
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=27.4
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.292
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.681
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.196
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.408
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.116
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=29.2
+[Epoch 12] mAP 29.2 higher than current best [27.9] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 12] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0012_29.2000.params
+[Epoch 13][Batch 99], Speed: 3.509 samples/sec, RPN_Conf=0.148,RPN_SmoothL1=0.088,RCNN_CrossEntropy=0.402,RCNN_SmoothL1=0.348,RCNN_Mask=0.363,RPNAcc=0.906,RPNL1Loss=0.279,RCNNAcc=0.789,RCNNL1Loss=1.744,MaskAcc=0.813,MaskFGAcc=0.479
+[Epoch 13][Batch 199], Speed: 3.515 samples/sec, RPN_Conf=0.152,RPN_SmoothL1=0.090,RCNN_CrossEntropy=0.403,RCNN_SmoothL1=0.344,RCNN_Mask=0.364,RPNAcc=0.907,RPNL1Loss=0.277,RCNNAcc=0.790,RCNNL1Loss=1.732,MaskAcc=0.813,MaskFGAcc=0.479
+[Epoch 13] Training cost: 64.036, RPN_Conf=0.154,RPN_SmoothL1=0.090,RCNN_CrossEntropy=0.402,RCNN_SmoothL1=0.347,RCNN_Mask=0.365
+[Epoch 13] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.262
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.143
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.394
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.109
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=26.2
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.276
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.668
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.179
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.392
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.113
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.393
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.393
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=27.6
+[Epoch 13] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0013_27.6000.params
+[Epoch 14][Batch 99], Speed: 3.509 samples/sec, RPN_Conf=0.154,RPN_SmoothL1=0.086,RCNN_CrossEntropy=0.389,RCNN_SmoothL1=0.324,RCNN_Mask=0.359,RPNAcc=0.908,RPNL1Loss=0.275,RCNNAcc=0.792,RCNNL1Loss=1.717,MaskAcc=0.815,MaskFGAcc=0.479
+[Epoch 14][Batch 199], Speed: 3.513 samples/sec, RPN_Conf=0.153,RPN_SmoothL1=0.087,RCNN_CrossEntropy=0.393,RCNN_SmoothL1=0.324,RCNN_Mask=0.355,RPNAcc=0.909,RPNL1Loss=0.274,RCNNAcc=0.793,RCNNL1Loss=1.705,MaskAcc=0.815,MaskFGAcc=0.479
+[Epoch 14] Training cost: 64.001, RPN_Conf=0.154,RPN_SmoothL1=0.088,RCNN_CrossEntropy=0.395,RCNN_SmoothL1=0.329,RCNN_Mask=0.356
+[Epoch 14] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.278
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.702
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.159
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.399
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.117
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.400
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.400
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=27.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.300
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.692
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.207
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.410
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.122
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=30.0
+[Epoch 14] mAP 30.0 higher than current best [29.2] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 14] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0014_30.0000.params
+[Epoch 15][Batch 99], Speed: 3.536 samples/sec, RPN_Conf=0.146,RPN_SmoothL1=0.087,RCNN_CrossEntropy=0.400,RCNN_SmoothL1=0.324,RCNN_Mask=0.356,RPNAcc=0.911,RPNL1Loss=0.273,RCNNAcc=0.794,RCNNL1Loss=1.692,MaskAcc=0.816,MaskFGAcc=0.479
+[Epoch 15][Batch 199], Speed: 3.582 samples/sec, RPN_Conf=0.149,RPN_SmoothL1=0.088,RCNN_CrossEntropy=0.394,RCNN_SmoothL1=0.322,RCNN_Mask=0.353,RPNAcc=0.911,RPNL1Loss=0.271,RCNNAcc=0.794,RCNNL1Loss=1.682,MaskAcc=0.817,MaskFGAcc=0.480
+[Epoch 15] Training cost: 63.306, RPN_Conf=0.148,RPN_SmoothL1=0.087,RCNN_CrossEntropy=0.395,RCNN_SmoothL1=0.322,RCNN_Mask=0.353
+[Epoch 15] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.292
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.705
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.175
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.408
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.117
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=29.2
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.310
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.699
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.224
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.421
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.122
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.423
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.423
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.0
+[Epoch 15] mAP 31.0 higher than current best [30.0] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 15] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0015_31.0000.params
+[Epoch 16][Batch 99], Speed: 3.648 samples/sec, RPN_Conf=0.145,RPN_SmoothL1=0.082,RCNN_CrossEntropy=0.370,RCNN_SmoothL1=0.307,RCNN_Mask=0.346,RPNAcc=0.912,RPNL1Loss=0.270,RCNNAcc=0.796,RCNNL1Loss=1.668,MaskAcc=0.818,MaskFGAcc=0.480
+[Epoch 16][Batch 199], Speed: 3.467 samples/sec, RPN_Conf=0.149,RPN_SmoothL1=0.085,RCNN_CrossEntropy=0.389,RCNN_SmoothL1=0.318,RCNN_Mask=0.353,RPNAcc=0.913,RPNL1Loss=0.269,RCNNAcc=0.796,RCNNL1Loss=1.659,MaskAcc=0.819,MaskFGAcc=0.480
+[Epoch 16] Training cost: 64.530, RPN_Conf=0.150,RPN_SmoothL1=0.086,RCNN_CrossEntropy=0.390,RCNN_SmoothL1=0.317,RCNN_Mask=0.353
+[Epoch 16] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.308
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.703
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.216
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.126
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.427
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.427
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=30.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.309
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.692
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.228
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.416
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.126
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=30.9
+[Epoch 16] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0016_30.9000.params
+[Epoch 17][Batch 99], Speed: 3.434 samples/sec, RPN_Conf=0.147,RPN_SmoothL1=0.080,RCNN_CrossEntropy=0.391,RCNN_SmoothL1=0.315,RCNN_Mask=0.352,RPNAcc=0.914,RPNL1Loss=0.267,RCNNAcc=0.797,RCNNL1Loss=1.646,MaskAcc=0.820,MaskFGAcc=0.480
+[Epoch 17][Batch 199], Speed: 3.482 samples/sec, RPN_Conf=0.144,RPN_SmoothL1=0.084,RCNN_CrossEntropy=0.387,RCNN_SmoothL1=0.311,RCNN_Mask=0.347,RPNAcc=0.915,RPNL1Loss=0.266,RCNNAcc=0.798,RCNNL1Loss=1.636,MaskAcc=0.821,MaskFGAcc=0.480
+[Epoch 17] Training cost: 65.534, RPN_Conf=0.143,RPN_SmoothL1=0.085,RCNN_CrossEntropy=0.387,RCNN_SmoothL1=0.311,RCNN_Mask=0.347
+[Epoch 17] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.285
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.703
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.171
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.408
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.118
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=28.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.308
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.716
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.213
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.416
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.122
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.420
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.420
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=30.8
+[Epoch 17] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0017_30.8000.params
+[Epoch 18][Batch 99], Speed: 3.326 samples/sec, RPN_Conf=0.136,RPN_SmoothL1=0.089,RCNN_CrossEntropy=0.388,RCNN_SmoothL1=0.308,RCNN_Mask=0.342,RPNAcc=0.916,RPNL1Loss=0.265,RCNNAcc=0.799,RCNNL1Loss=1.625,MaskAcc=0.821,MaskFGAcc=0.480
+[Epoch 18][Batch 199], Speed: 3.600 samples/sec, RPN_Conf=0.138,RPN_SmoothL1=0.086,RCNN_CrossEntropy=0.385,RCNN_SmoothL1=0.308,RCNN_Mask=0.344,RPNAcc=0.916,RPNL1Loss=0.264,RCNNAcc=0.799,RCNNL1Loss=1.615,MaskAcc=0.822,MaskFGAcc=0.480
+[Epoch 18] Training cost: 65.538, RPN_Conf=0.141,RPN_SmoothL1=0.085,RCNN_CrossEntropy=0.385,RCNN_SmoothL1=0.307,RCNN_Mask=0.344
+[Epoch 18] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.312
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.724
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.212
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.426
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.125
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.426
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.426
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=31.2
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.320
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.712
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.238
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.428
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.127
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.427
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.427
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=32.0
+[Epoch 18] mAP 32.0 higher than current best [31.0] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 18] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0018_32.0000.params
+[Epoch 19][Batch 99], Speed: 3.395 samples/sec, RPN_Conf=0.145,RPN_SmoothL1=0.082,RCNN_CrossEntropy=0.375,RCNN_SmoothL1=0.300,RCNN_Mask=0.346,RPNAcc=0.917,RPNL1Loss=0.263,RCNNAcc=0.800,RCNNL1Loss=1.604,MaskAcc=0.823,MaskFGAcc=0.480
+[Epoch 19][Batch 199], Speed: 3.520 samples/sec, RPN_Conf=0.137,RPN_SmoothL1=0.084,RCNN_CrossEntropy=0.383,RCNN_SmoothL1=0.305,RCNN_Mask=0.349,RPNAcc=0.918,RPNL1Loss=0.262,RCNNAcc=0.801,RCNNL1Loss=1.596,MaskAcc=0.823,MaskFGAcc=0.481
+[Epoch 19] Training cost: 64.770, RPN_Conf=0.137,RPN_SmoothL1=0.083,RCNN_CrossEntropy=0.380,RCNN_SmoothL1=0.303,RCNN_Mask=0.347
+[Epoch 19] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.300
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.702
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.195
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.417
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.120
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=30.0
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.311
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.702
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.241
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.416
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.124
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.1
+[Epoch 19] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0019_31.1000.params
+[Epoch 20][Batch 99], Speed: 3.337 samples/sec, RPN_Conf=0.134,RPN_SmoothL1=0.083,RCNN_CrossEntropy=0.377,RCNN_SmoothL1=0.285,RCNN_Mask=0.338,RPNAcc=0.919,RPNL1Loss=0.261,RCNNAcc=0.802,RCNNL1Loss=1.585,MaskAcc=0.824,MaskFGAcc=0.481
+[Epoch 20][Batch 199], Speed: 3.600 samples/sec, RPN_Conf=0.144,RPN_SmoothL1=0.087,RCNN_CrossEntropy=0.387,RCNN_SmoothL1=0.306,RCNN_Mask=0.348,RPNAcc=0.919,RPNL1Loss=0.260,RCNNAcc=0.802,RCNNL1Loss=1.579,MaskAcc=0.825,MaskFGAcc=0.481
+[Epoch 20] Training cost: 64.623, RPN_Conf=0.146,RPN_SmoothL1=0.086,RCNN_CrossEntropy=0.386,RCNN_SmoothL1=0.310,RCNN_Mask=0.351
+[Epoch 20] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.265
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.666
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.151
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.380
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.112
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.384
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.384
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=26.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.281
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.649
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.199
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.389
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.117
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=28.1
+[Epoch 20] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0020_28.1000.params
+[Epoch 21][Batch 99], Speed: 3.604 samples/sec, RPN_Conf=0.145,RPN_SmoothL1=0.076,RCNN_CrossEntropy=0.383,RCNN_SmoothL1=0.304,RCNN_Mask=0.352,RPNAcc=0.920,RPNL1Loss=0.259,RCNNAcc=0.803,RCNNL1Loss=1.571,MaskAcc=0.825,MaskFGAcc=0.481
+[Epoch 21][Batch 199], Speed: 3.498 samples/sec, RPN_Conf=0.144,RPN_SmoothL1=0.082,RCNN_CrossEntropy=0.389,RCNN_SmoothL1=0.305,RCNN_Mask=0.352,RPNAcc=0.920,RPNL1Loss=0.258,RCNNAcc=0.803,RCNNL1Loss=1.564,MaskAcc=0.826,MaskFGAcc=0.481
+[Epoch 21] Training cost: 63.821, RPN_Conf=0.143,RPN_SmoothL1=0.082,RCNN_CrossEntropy=0.384,RCNN_SmoothL1=0.301,RCNN_Mask=0.349
+[Epoch 21] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.300
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.713
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.196
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.411
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.122
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.412
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.412
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=30.0
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.315
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.705
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.228
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.417
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.127
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.419
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.419
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.5
+[Epoch 21] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0021_31.5000.params
+[Epoch 22][Batch 99], Speed: 3.543 samples/sec, RPN_Conf=0.132,RPN_SmoothL1=0.079,RCNN_CrossEntropy=0.375,RCNN_SmoothL1=0.291,RCNN_Mask=0.343,RPNAcc=0.921,RPNL1Loss=0.257,RCNNAcc=0.804,RCNNL1Loss=1.554,MaskAcc=0.826,MaskFGAcc=0.481
+[Epoch 22][Batch 199], Speed: 3.519 samples/sec, RPN_Conf=0.130,RPN_SmoothL1=0.080,RCNN_CrossEntropy=0.373,RCNN_SmoothL1=0.292,RCNN_Mask=0.340,RPNAcc=0.921,RPNL1Loss=0.256,RCNNAcc=0.804,RCNNL1Loss=1.547,MaskAcc=0.827,MaskFGAcc=0.481
+[Epoch 22] Training cost: 63.703, RPN_Conf=0.130,RPN_SmoothL1=0.080,RCNN_CrossEntropy=0.372,RCNN_SmoothL1=0.292,RCNN_Mask=0.340
+[Epoch 22] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.303
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.681
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.226
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.423
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.123
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=30.3
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.310
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.666
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.251
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.126
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.0
+[Epoch 22] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0022_31.0000.params
+[Epoch 23][Batch 99], Speed: 3.613 samples/sec, RPN_Conf=0.121,RPN_SmoothL1=0.077,RCNN_CrossEntropy=0.341,RCNN_SmoothL1=0.273,RCNN_Mask=0.331,RPNAcc=0.922,RPNL1Loss=0.255,RCNNAcc=0.806,RCNNL1Loss=1.537,MaskAcc=0.827,MaskFGAcc=0.481
+[Epoch 23][Batch 199], Speed: 3.552 samples/sec, RPN_Conf=0.126,RPN_SmoothL1=0.079,RCNN_CrossEntropy=0.358,RCNN_SmoothL1=0.285,RCNN_Mask=0.336,RPNAcc=0.923,RPNL1Loss=0.254,RCNNAcc=0.806,RCNNL1Loss=1.531,MaskAcc=0.828,MaskFGAcc=0.482
+[Epoch 23] Training cost: 63.459, RPN_Conf=0.128,RPN_SmoothL1=0.078,RCNN_CrossEntropy=0.359,RCNN_SmoothL1=0.286,RCNN_Mask=0.336
+[Epoch 23] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.317
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.716
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.234
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.428
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.124
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.430
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.430
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=31.7
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.325
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.713
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.256
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.125
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=32.5
+[Epoch 23] mAP 32.5 higher than current best [32.0] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 23] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0023_32.5000.params
+[Epoch 24][Batch 99], Speed: 3.292 samples/sec, RPN_Conf=0.123,RPN_SmoothL1=0.080,RCNN_CrossEntropy=0.362,RCNN_SmoothL1=0.276,RCNN_Mask=0.330,RPNAcc=0.923,RPNL1Loss=0.253,RCNNAcc=0.807,RCNNL1Loss=1.522,MaskAcc=0.828,MaskFGAcc=0.482
+[Epoch 24][Batch 199], Speed: 3.527 samples/sec, RPN_Conf=0.122,RPN_SmoothL1=0.079,RCNN_CrossEntropy=0.362,RCNN_SmoothL1=0.277,RCNN_Mask=0.331,RPNAcc=0.924,RPNL1Loss=0.252,RCNNAcc=0.807,RCNNL1Loss=1.515,MaskAcc=0.829,MaskFGAcc=0.482
+[Epoch 24] Training cost: 66.729, RPN_Conf=0.123,RPN_SmoothL1=0.079,RCNN_CrossEntropy=0.363,RCNN_SmoothL1=0.279,RCNN_Mask=0.332
+[Epoch 24] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.288
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.708
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.180
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.397
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.120
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.398
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.398
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=28.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.307
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.702
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.223
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.407
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.124
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=30.7
+[Epoch 24] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0024_30.7000.params
+[Epoch 25][Batch 99], Speed: 3.241 samples/sec, RPN_Conf=0.116,RPN_SmoothL1=0.079,RCNN_CrossEntropy=0.361,RCNN_SmoothL1=0.284,RCNN_Mask=0.334,RPNAcc=0.925,RPNL1Loss=0.251,RCNNAcc=0.808,RCNNL1Loss=1.507,MaskAcc=0.829,MaskFGAcc=0.482
+[Epoch 25][Batch 199], Speed: 3.548 samples/sec, RPN_Conf=0.119,RPN_SmoothL1=0.078,RCNN_CrossEntropy=0.360,RCNN_SmoothL1=0.274,RCNN_Mask=0.331,RPNAcc=0.925,RPNL1Loss=0.250,RCNNAcc=0.809,RCNNL1Loss=1.500,MaskAcc=0.830,MaskFGAcc=0.482
+[Epoch 25] Training cost: 66.383, RPN_Conf=0.121,RPN_SmoothL1=0.078,RCNN_CrossEntropy=0.358,RCNN_SmoothL1=0.274,RCNN_Mask=0.332
+[Epoch 25] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.314
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.723
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.218
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.423
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.123
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.426
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.426
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=31.4
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.314
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.708
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.221
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.415
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.121
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.417
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.417
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.4
+[Epoch 25] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0025_31.4000.params
+[Epoch 26][Batch 99], Speed: 3.505 samples/sec, RPN_Conf=0.120,RPN_SmoothL1=0.075,RCNN_CrossEntropy=0.349,RCNN_SmoothL1=0.269,RCNN_Mask=0.329,RPNAcc=0.926,RPNL1Loss=0.249,RCNNAcc=0.809,RCNNL1Loss=1.491,MaskAcc=0.830,MaskFGAcc=0.482
+[Epoch 26][Batch 199], Speed: 3.591 samples/sec, RPN_Conf=0.123,RPN_SmoothL1=0.076,RCNN_CrossEntropy=0.357,RCNN_SmoothL1=0.273,RCNN_Mask=0.329,RPNAcc=0.926,RPNL1Loss=0.249,RCNNAcc=0.810,RCNNL1Loss=1.485,MaskAcc=0.831,MaskFGAcc=0.482
+[Epoch 26] Training cost: 63.752, RPN_Conf=0.123,RPN_SmoothL1=0.077,RCNN_CrossEntropy=0.359,RCNN_SmoothL1=0.272,RCNN_Mask=0.329
+[Epoch 26] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.314
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.713
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.225
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.126
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=31.4
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.312
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.698
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.236
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.412
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.124
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.2
+[Epoch 26] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0026_31.2000.params
+[Epoch 27][Batch 99], Speed: 3.550 samples/sec, RPN_Conf=0.115,RPN_SmoothL1=0.075,RCNN_CrossEntropy=0.346,RCNN_SmoothL1=0.256,RCNN_Mask=0.318,RPNAcc=0.927,RPNL1Loss=0.248,RCNNAcc=0.811,RCNNL1Loss=1.476,MaskAcc=0.832,MaskFGAcc=0.482
+[Epoch 27][Batch 199], Speed: 3.594 samples/sec, RPN_Conf=0.120,RPN_SmoothL1=0.077,RCNN_CrossEntropy=0.357,RCNN_SmoothL1=0.267,RCNN_Mask=0.324,RPNAcc=0.927,RPNL1Loss=0.247,RCNNAcc=0.811,RCNNL1Loss=1.471,MaskAcc=0.832,MaskFGAcc=0.482
+[Epoch 27] Training cost: 63.933, RPN_Conf=0.118,RPN_SmoothL1=0.076,RCNN_CrossEntropy=0.355,RCNN_SmoothL1=0.266,RCNN_Mask=0.323
+[Epoch 27] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.311
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.719
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.201
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.126
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.427
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.427
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=31.1
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.315
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.720
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.231
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.423
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.015
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.126
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.5
+[Epoch 27] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0027_31.5000.params
+[Epoch 28][Batch 99], Speed: 3.560 samples/sec, RPN_Conf=0.113,RPN_SmoothL1=0.075,RCNN_CrossEntropy=0.336,RCNN_SmoothL1=0.260,RCNN_Mask=0.324,RPNAcc=0.928,RPNL1Loss=0.246,RCNNAcc=0.812,RCNNL1Loss=1.463,MaskAcc=0.832,MaskFGAcc=0.482
+[Epoch 28][Batch 199], Speed: 3.514 samples/sec, RPN_Conf=0.117,RPN_SmoothL1=0.074,RCNN_CrossEntropy=0.346,RCNN_SmoothL1=0.262,RCNN_Mask=0.326,RPNAcc=0.928,RPNL1Loss=0.245,RCNNAcc=0.812,RCNNL1Loss=1.456,MaskAcc=0.833,MaskFGAcc=0.483
+[Epoch 28] Training cost: 64.138, RPN_Conf=0.119,RPN_SmoothL1=0.075,RCNN_CrossEntropy=0.348,RCNN_SmoothL1=0.262,RCNN_Mask=0.324
+[Epoch 28] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.292
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.681
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.197
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.408
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.116
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.408
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.408
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=29.2
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.306
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.679
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.230
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.420
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.119
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.419
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.419
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=30.6
+[Epoch 28] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0028_30.6000.params
+[Epoch 29][Batch 99], Speed: 3.585 samples/sec, RPN_Conf=0.105,RPN_SmoothL1=0.073,RCNN_CrossEntropy=0.326,RCNN_SmoothL1=0.253,RCNN_Mask=0.316,RPNAcc=0.928,RPNL1Loss=0.244,RCNNAcc=0.813,RCNNL1Loss=1.449,MaskAcc=0.833,MaskFGAcc=0.483
+[Epoch 29][Batch 199], Speed: 3.574 samples/sec, RPN_Conf=0.114,RPN_SmoothL1=0.075,RCNN_CrossEntropy=0.342,RCNN_SmoothL1=0.258,RCNN_Mask=0.322,RPNAcc=0.929,RPNL1Loss=0.244,RCNNAcc=0.813,RCNNL1Loss=1.443,MaskAcc=0.834,MaskFGAcc=0.483
+[Epoch 29] Training cost: 63.875, RPN_Conf=0.114,RPN_SmoothL1=0.075,RCNN_CrossEntropy=0.345,RCNN_SmoothL1=0.258,RCNN_Mask=0.323
+[Epoch 29] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.316
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.704
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.222
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.427
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.125
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.430
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.430
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=31.6
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.324
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.710
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.251
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.428
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.124
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.432
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.432
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=32.4
+[Epoch 29] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0029_32.4000.params
+[Epoch 30][Batch 99], Speed: 3.326 samples/sec, RPN_Conf=0.108,RPN_SmoothL1=0.074,RCNN_CrossEntropy=0.352,RCNN_SmoothL1=0.260,RCNN_Mask=0.325,RPNAcc=0.929,RPNL1Loss=0.243,RCNNAcc=0.814,RCNNL1Loss=1.436,MaskAcc=0.834,MaskFGAcc=0.483
+[Epoch 30][Batch 199], Speed: 3.633 samples/sec, RPN_Conf=0.107,RPN_SmoothL1=0.074,RCNN_CrossEntropy=0.341,RCNN_SmoothL1=0.255,RCNN_Mask=0.319,RPNAcc=0.930,RPNL1Loss=0.242,RCNNAcc=0.814,RCNNL1Loss=1.430,MaskAcc=0.835,MaskFGAcc=0.483
+[Epoch 30] Training cost: 64.789, RPN_Conf=0.108,RPN_SmoothL1=0.075,RCNN_CrossEntropy=0.343,RCNN_SmoothL1=0.257,RCNN_Mask=0.319
+[Epoch 30] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.257
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.668
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.145
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.382
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.106
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.386
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.386
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=25.7
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.295
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.689
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.221
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.406
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.118
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.409
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.409
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=29.5
+[Epoch 30] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0030_29.5000.params
+[Epoch 31][Batch 99], Speed: 3.522 samples/sec, RPN_Conf=0.098,RPN_SmoothL1=0.068,RCNN_CrossEntropy=0.328,RCNN_SmoothL1=0.239,RCNN_Mask=0.306,RPNAcc=0.930,RPNL1Loss=0.241,RCNNAcc=0.815,RCNNL1Loss=1.422,MaskAcc=0.835,MaskFGAcc=0.483
+[Epoch 31][Batch 199], Speed: 3.563 samples/sec, RPN_Conf=0.108,RPN_SmoothL1=0.073,RCNN_CrossEntropy=0.335,RCNN_SmoothL1=0.247,RCNN_Mask=0.317,RPNAcc=0.931,RPNL1Loss=0.241,RCNNAcc=0.816,RCNNL1Loss=1.417,MaskAcc=0.836,MaskFGAcc=0.483
+[Epoch 31] Training cost: 63.851, RPN_Conf=0.108,RPN_SmoothL1=0.074,RCNN_CrossEntropy=0.337,RCNN_SmoothL1=0.250,RCNN_Mask=0.319
+[Epoch 31] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.326
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.716
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.245
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.437
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.437
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=32.6
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.324
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.714
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.246
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.424
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.129
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.428
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.428
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=32.4
+[Epoch 31] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0031_32.4000.params
+[Epoch 32][Batch 99], Speed: 3.504 samples/sec, RPN_Conf=0.097,RPN_SmoothL1=0.070,RCNN_CrossEntropy=0.331,RCNN_SmoothL1=0.245,RCNN_Mask=0.316,RPNAcc=0.931,RPNL1Loss=0.240,RCNNAcc=0.816,RCNNL1Loss=1.410,MaskAcc=0.836,MaskFGAcc=0.483
+[Epoch 32][Batch 199], Speed: 3.591 samples/sec, RPN_Conf=0.104,RPN_SmoothL1=0.072,RCNN_CrossEntropy=0.333,RCNN_SmoothL1=0.243,RCNN_Mask=0.315,RPNAcc=0.932,RPNL1Loss=0.239,RCNNAcc=0.817,RCNNL1Loss=1.404,MaskAcc=0.836,MaskFGAcc=0.483
+[Epoch 32] Training cost: 63.745, RPN_Conf=0.106,RPN_SmoothL1=0.072,RCNN_CrossEntropy=0.332,RCNN_SmoothL1=0.242,RCNN_Mask=0.314
+[Epoch 32] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.316
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.712
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.223
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.427
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.018
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.429
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.429
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=31.6
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.322
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.699
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.252
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.424
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.129
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.426
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.426
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=32.2
+[Epoch 32] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0032_32.2000.params
+[Epoch 33][Batch 99], Speed: 3.565 samples/sec, RPN_Conf=0.104,RPN_SmoothL1=0.074,RCNN_CrossEntropy=0.342,RCNN_SmoothL1=0.252,RCNN_Mask=0.319,RPNAcc=0.932,RPNL1Loss=0.238,RCNNAcc=0.817,RCNNL1Loss=1.397,MaskAcc=0.837,MaskFGAcc=0.483
+[Epoch 33][Batch 199], Speed: 3.549 samples/sec, RPN_Conf=0.104,RPN_SmoothL1=0.071,RCNN_CrossEntropy=0.335,RCNN_SmoothL1=0.244,RCNN_Mask=0.315,RPNAcc=0.932,RPNL1Loss=0.238,RCNNAcc=0.818,RCNNL1Loss=1.391,MaskAcc=0.837,MaskFGAcc=0.483
+[Epoch 33] Training cost: 63.784, RPN_Conf=0.103,RPN_SmoothL1=0.071,RCNN_CrossEntropy=0.331,RCNN_SmoothL1=0.243,RCNN_Mask=0.315
+[Epoch 33] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.318
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.707
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.244
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.125
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.437
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.437
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=31.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.313
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.693
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.245
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.422
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.125
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.423
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.423
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.3
+[Epoch 33] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0033_31.3000.params
+[Epoch 34][Batch 99], Speed: 3.613 samples/sec, RPN_Conf=0.092,RPN_SmoothL1=0.069,RCNN_CrossEntropy=0.319,RCNN_SmoothL1=0.237,RCNN_Mask=0.309,RPNAcc=0.933,RPNL1Loss=0.237,RCNNAcc=0.819,RCNNL1Loss=1.384,MaskAcc=0.838,MaskFGAcc=0.483
+[Epoch 34][Batch 199], Speed: 3.479 samples/sec, RPN_Conf=0.099,RPN_SmoothL1=0.071,RCNN_CrossEntropy=0.332,RCNN_SmoothL1=0.240,RCNN_Mask=0.313,RPNAcc=0.933,RPNL1Loss=0.236,RCNNAcc=0.819,RCNNL1Loss=1.379,MaskAcc=0.838,MaskFGAcc=0.483
+[Epoch 34] Training cost: 63.841, RPN_Conf=0.102,RPN_SmoothL1=0.071,RCNN_CrossEntropy=0.333,RCNN_SmoothL1=0.241,RCNN_Mask=0.313
+[Epoch 34] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.308
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.689
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.224
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.413
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.126
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=30.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.310
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.688
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.238
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.409
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.126
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.412
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.412
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=31.0
+[Epoch 34] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0034_31.0000.params
+[Epoch 35] Set learning rate to 0.00015000000000000001
+[Epoch 35][Batch 99], Speed: 3.394 samples/sec, RPN_Conf=0.098,RPN_SmoothL1=0.065,RCNN_CrossEntropy=0.308,RCNN_SmoothL1=0.225,RCNN_Mask=0.310,RPNAcc=0.934,RPNL1Loss=0.235,RCNNAcc=0.820,RCNNL1Loss=1.372,MaskAcc=0.838,MaskFGAcc=0.484
+[Epoch 35][Batch 199], Speed: 3.689 samples/sec, RPN_Conf=0.090,RPN_SmoothL1=0.061,RCNN_CrossEntropy=0.297,RCNN_SmoothL1=0.211,RCNN_Mask=0.303,RPNAcc=0.934,RPNL1Loss=0.234,RCNNAcc=0.820,RCNNL1Loss=1.365,MaskAcc=0.839,MaskFGAcc=0.484
+[Epoch 35] Training cost: 64.619, RPN_Conf=0.090,RPN_SmoothL1=0.062,RCNN_CrossEntropy=0.299,RCNN_SmoothL1=0.211,RCNN_Mask=0.303
+[Epoch 35] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.740
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.253
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.439
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.018
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.340
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.727
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.280
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.132
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=34.0
+[Epoch 35] mAP 34.0 higher than current best [32.5] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 35] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0035_34.0000.params
+[Epoch 36][Batch 99], Speed: 3.519 samples/sec, RPN_Conf=0.074,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.281,RCNN_SmoothL1=0.194,RCNN_Mask=0.285,RPNAcc=0.935,RPNL1Loss=0.233,RCNNAcc=0.821,RCNNL1Loss=1.357,MaskAcc=0.839,MaskFGAcc=0.484
+[Epoch 36][Batch 199], Speed: 3.547 samples/sec, RPN_Conf=0.083,RPN_SmoothL1=0.056,RCNN_CrossEntropy=0.288,RCNN_SmoothL1=0.196,RCNN_Mask=0.289,RPNAcc=0.935,RPNL1Loss=0.232,RCNNAcc=0.822,RCNNL1Loss=1.350,MaskAcc=0.840,MaskFGAcc=0.484
+[Epoch 36] Training cost: 64.161, RPN_Conf=0.083,RPN_SmoothL1=0.057,RCNN_CrossEntropy=0.291,RCNN_SmoothL1=0.200,RCNN_Mask=0.291
+[Epoch 36] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.339
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.731
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.258
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.445
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.9
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.340
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.730
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.289
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=34.0
+[Epoch 36] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0036_34.0000.params
+[Epoch 37][Batch 99], Speed: 3.480 samples/sec, RPN_Conf=0.074,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.269,RCNN_SmoothL1=0.177,RCNN_Mask=0.284,RPNAcc=0.936,RPNL1Loss=0.231,RCNNAcc=0.823,RCNNL1Loss=1.341,MaskAcc=0.840,MaskFGAcc=0.484
+[Epoch 37][Batch 199], Speed: 3.491 samples/sec, RPN_Conf=0.079,RPN_SmoothL1=0.056,RCNN_CrossEntropy=0.284,RCNN_SmoothL1=0.187,RCNN_Mask=0.289,RPNAcc=0.936,RPNL1Loss=0.230,RCNNAcc=0.823,RCNNL1Loss=1.335,MaskAcc=0.841,MaskFGAcc=0.484
+[Epoch 37] Training cost: 64.925, RPN_Conf=0.080,RPN_SmoothL1=0.056,RCNN_CrossEntropy=0.287,RCNN_SmoothL1=0.190,RCNN_Mask=0.290
+[Epoch 37] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.339
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.732
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.251
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.018
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.442
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.442
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.9
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.341
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.727
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.280
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.132
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=34.1
+[Epoch 37] mAP 34.1 higher than current best [34.0] saving to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_best.params
+[Epoch 37] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0037_34.1000.params
+[Epoch 38][Batch 99], Speed: 3.454 samples/sec, RPN_Conf=0.080,RPN_SmoothL1=0.058,RCNN_CrossEntropy=0.275,RCNN_SmoothL1=0.188,RCNN_Mask=0.289,RPNAcc=0.937,RPNL1Loss=0.229,RCNNAcc=0.824,RCNNL1Loss=1.327,MaskAcc=0.841,MaskFGAcc=0.484
+[Epoch 38][Batch 199], Speed: 3.569 samples/sec, RPN_Conf=0.079,RPN_SmoothL1=0.056,RCNN_CrossEntropy=0.278,RCNN_SmoothL1=0.189,RCNN_Mask=0.287,RPNAcc=0.937,RPNL1Loss=0.228,RCNNAcc=0.825,RCNNL1Loss=1.321,MaskAcc=0.842,MaskFGAcc=0.484
+[Epoch 38] Training cost: 64.611, RPN_Conf=0.079,RPN_SmoothL1=0.056,RCNN_CrossEntropy=0.280,RCNN_SmoothL1=0.189,RCNN_Mask=0.287
+[Epoch 38] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.336
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.731
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.260
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.018
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.6
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.340
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.279
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.440
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.132
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=34.0
+[Epoch 38] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0038_34.0000.params
+[Epoch 39][Batch 99], Speed: 3.540 samples/sec, RPN_Conf=0.071,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.279,RCNN_SmoothL1=0.184,RCNN_Mask=0.287,RPNAcc=0.937,RPNL1Loss=0.227,RCNNAcc=0.825,RCNNL1Loss=1.313,MaskAcc=0.842,MaskFGAcc=0.484
+[Epoch 39][Batch 199], Speed: 3.560 samples/sec, RPN_Conf=0.076,RPN_SmoothL1=0.055,RCNN_CrossEntropy=0.285,RCNN_SmoothL1=0.191,RCNN_Mask=0.289,RPNAcc=0.938,RPNL1Loss=0.226,RCNNAcc=0.826,RCNNL1Loss=1.307,MaskAcc=0.843,MaskFGAcc=0.484
+[Epoch 39] Training cost: 63.935, RPN_Conf=0.076,RPN_SmoothL1=0.056,RCNN_CrossEntropy=0.287,RCNN_SmoothL1=0.192,RCNN_Mask=0.290
+[Epoch 39] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.339
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.731
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.261
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.445
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.018
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.446
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.446
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.9
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.341
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.727
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.282
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.440
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=34.1
+[Epoch 39] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0039_34.1000.params
+[Epoch 40][Batch 99], Speed: 3.376 samples/sec, RPN_Conf=0.080,RPN_SmoothL1=0.055,RCNN_CrossEntropy=0.288,RCNN_SmoothL1=0.193,RCNN_Mask=0.287,RPNAcc=0.938,RPNL1Loss=0.224,RCNNAcc=0.827,RCNNL1Loss=1.300,MaskAcc=0.843,MaskFGAcc=0.484
+[Epoch 40][Batch 199], Speed: 3.637 samples/sec, RPN_Conf=0.078,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.282,RCNN_SmoothL1=0.187,RCNN_Mask=0.286,RPNAcc=0.939,RPNL1Loss=0.224,RCNNAcc=0.827,RCNNL1Loss=1.294,MaskAcc=0.843,MaskFGAcc=0.484
+[Epoch 40] Training cost: 64.595, RPN_Conf=0.078,RPN_SmoothL1=0.055,RCNN_CrossEntropy=0.282,RCNN_SmoothL1=0.187,RCNN_Mask=0.286
+[Epoch 40] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.720
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.262
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.336
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.723
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.277
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.434
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.132
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.436
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.436
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.6
+[Epoch 40] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0040_33.6000.params
+[Epoch 41][Batch 99], Speed: 3.311 samples/sec, RPN_Conf=0.080,RPN_SmoothL1=0.055,RCNN_CrossEntropy=0.289,RCNN_SmoothL1=0.186,RCNN_Mask=0.285,RPNAcc=0.939,RPNL1Loss=0.222,RCNNAcc=0.828,RCNNL1Loss=1.286,MaskAcc=0.844,MaskFGAcc=0.484
+[Epoch 41][Batch 199], Speed: 3.626 samples/sec, RPN_Conf=0.075,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.282,RCNN_SmoothL1=0.185,RCNN_Mask=0.282,RPNAcc=0.939,RPNL1Loss=0.222,RCNNAcc=0.828,RCNNL1Loss=1.280,MaskAcc=0.844,MaskFGAcc=0.484
+[Epoch 41] Training cost: 65.235, RPN_Conf=0.075,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.284,RCNN_SmoothL1=0.185,RCNN_Mask=0.284
+[Epoch 41] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.331
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.250
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.019
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.136
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.1
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.717
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.271
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.430
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.018
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.432
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.432
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 41] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0041_33.4000.params
+[Epoch 42][Batch 99], Speed: 3.429 samples/sec, RPN_Conf=0.073,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.276,RCNN_SmoothL1=0.182,RCNN_Mask=0.283,RPNAcc=0.940,RPNL1Loss=0.221,RCNNAcc=0.829,RCNNL1Loss=1.273,MaskAcc=0.845,MaskFGAcc=0.484
+[Epoch 42][Batch 199], Speed: 3.563 samples/sec, RPN_Conf=0.077,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.280,RCNN_SmoothL1=0.183,RCNN_Mask=0.284,RPNAcc=0.940,RPNL1Loss=0.220,RCNNAcc=0.829,RCNNL1Loss=1.268,MaskAcc=0.845,MaskFGAcc=0.484
+[Epoch 42] Training cost: 64.846, RPN_Conf=0.075,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.282,RCNN_SmoothL1=0.184,RCNN_Mask=0.284
+[Epoch 42] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.333
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.261
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.439
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.3
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.332
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.717
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.278
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.132
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.432
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.432
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.2
+[Epoch 42] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0042_33.2000.params
+[Epoch 43][Batch 99], Speed: 3.575 samples/sec, RPN_Conf=0.067,RPN_SmoothL1=0.050,RCNN_CrossEntropy=0.260,RCNN_SmoothL1=0.168,RCNN_Mask=0.270,RPNAcc=0.941,RPNL1Loss=0.219,RCNNAcc=0.830,RCNNL1Loss=1.261,MaskAcc=0.846,MaskFGAcc=0.484
+[Epoch 43][Batch 199], Speed: 3.619 samples/sec, RPN_Conf=0.073,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.279,RCNN_SmoothL1=0.177,RCNN_Mask=0.282,RPNAcc=0.941,RPNL1Loss=0.218,RCNNAcc=0.831,RCNNL1Loss=1.256,MaskAcc=0.846,MaskFGAcc=0.484
+[Epoch 43] Training cost: 63.325, RPN_Conf=0.074,RPN_SmoothL1=0.055,RCNN_CrossEntropy=0.281,RCNN_SmoothL1=0.177,RCNN_Mask=0.282
+[Epoch 43] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.331
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.248
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.018
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.1
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.720
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.273
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.132
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 43] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0043_33.4000.params
+[Epoch 44][Batch 99], Speed: 3.520 samples/sec, RPN_Conf=0.073,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.279,RCNN_SmoothL1=0.178,RCNN_Mask=0.281,RPNAcc=0.941,RPNL1Loss=0.217,RCNNAcc=0.831,RCNNL1Loss=1.249,MaskAcc=0.846,MaskFGAcc=0.484
+[Epoch 44][Batch 199], Speed: 3.551 samples/sec, RPN_Conf=0.073,RPN_SmoothL1=0.055,RCNN_CrossEntropy=0.282,RCNN_SmoothL1=0.183,RCNN_Mask=0.285,RPNAcc=0.942,RPNL1Loss=0.216,RCNNAcc=0.832,RCNNL1Loss=1.244,MaskAcc=0.847,MaskFGAcc=0.484
+[Epoch 44] Training cost: 64.207, RPN_Conf=0.072,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.280,RCNN_SmoothL1=0.181,RCNN_Mask=0.283
+[Epoch 44] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.333
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.725
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.256
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.132
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.3
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.272
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.434
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 44] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0044_33.4000.params
+[Epoch 45][Batch 99], Speed: 3.530 samples/sec, RPN_Conf=0.071,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.276,RCNN_SmoothL1=0.176,RCNN_Mask=0.279,RPNAcc=0.942,RPNL1Loss=0.216,RCNNAcc=0.832,RCNNL1Loss=1.238,MaskAcc=0.847,MaskFGAcc=0.484
+[Epoch 45][Batch 199], Speed: 3.493 samples/sec, RPN_Conf=0.071,RPN_SmoothL1=0.055,RCNN_CrossEntropy=0.274,RCNN_SmoothL1=0.176,RCNN_Mask=0.279,RPNAcc=0.942,RPNL1Loss=0.215,RCNNAcc=0.833,RCNNL1Loss=1.233,MaskAcc=0.847,MaskFGAcc=0.484
+[Epoch 45] Training cost: 64.480, RPN_Conf=0.070,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.273,RCNN_SmoothL1=0.176,RCNN_Mask=0.280
+[Epoch 45] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.727
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.252
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.4
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.717
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.276
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.430
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.131
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 45] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0045_33.4000.params
+[Epoch 46][Batch 99], Speed: 3.460 samples/sec, RPN_Conf=0.073,RPN_SmoothL1=0.050,RCNN_CrossEntropy=0.275,RCNN_SmoothL1=0.178,RCNN_Mask=0.283,RPNAcc=0.943,RPNL1Loss=0.214,RCNNAcc=0.833,RCNNL1Loss=1.226,MaskAcc=0.848,MaskFGAcc=0.484
+[Epoch 46][Batch 199], Speed: 3.587 samples/sec, RPN_Conf=0.073,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.275,RCNN_SmoothL1=0.179,RCNN_Mask=0.284,RPNAcc=0.943,RPNL1Loss=0.213,RCNNAcc=0.834,RCNNL1Loss=1.222,MaskAcc=0.848,MaskFGAcc=0.484
+[Epoch 46] Training cost: 64.300, RPN_Conf=0.073,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.276,RCNN_SmoothL1=0.179,RCNN_Mask=0.283
+[Epoch 46] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.730
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.258
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.337
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.720
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.285
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.434
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.131
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.436
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.436
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.7
+[Epoch 46] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0046_33.7000.params
+[Epoch 47][Batch 99], Speed: 3.419 samples/sec, RPN_Conf=0.075,RPN_SmoothL1=0.056,RCNN_CrossEntropy=0.280,RCNN_SmoothL1=0.179,RCNN_Mask=0.281,RPNAcc=0.943,RPNL1Loss=0.212,RCNNAcc=0.834,RCNNL1Loss=1.216,MaskAcc=0.848,MaskFGAcc=0.484
+[Epoch 47][Batch 199], Speed: 3.640 samples/sec, RPN_Conf=0.071,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.272,RCNN_SmoothL1=0.177,RCNN_Mask=0.282,RPNAcc=0.944,RPNL1Loss=0.212,RCNNAcc=0.835,RCNNL1Loss=1.211,MaskAcc=0.849,MaskFGAcc=0.484
+[Epoch 47] Training cost: 64.157, RPN_Conf=0.071,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.274,RCNN_SmoothL1=0.180,RCNN_Mask=0.284
+[Epoch 47] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.331
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.729
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.248
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.018
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.1
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.723
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.273
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.432
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 47] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0047_33.4000.params
+[Epoch 48][Batch 99], Speed: 3.559 samples/sec, RPN_Conf=0.065,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.261,RCNN_SmoothL1=0.169,RCNN_Mask=0.276,RPNAcc=0.944,RPNL1Loss=0.211,RCNNAcc=0.835,RCNNL1Loss=1.206,MaskAcc=0.849,MaskFGAcc=0.484
+[Epoch 48][Batch 199], Speed: 3.603 samples/sec, RPN_Conf=0.069,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.266,RCNN_SmoothL1=0.174,RCNN_Mask=0.281,RPNAcc=0.944,RPNL1Loss=0.210,RCNNAcc=0.836,RCNNL1Loss=1.201,MaskAcc=0.849,MaskFGAcc=0.484
+[Epoch 48] Training cost: 63.878, RPN_Conf=0.070,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.269,RCNN_SmoothL1=0.174,RCNN_Mask=0.281
+[Epoch 48] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.332
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.725
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.248
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.2
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.332
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.725
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.261
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.428
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.131
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.430
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.430
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.2
+[Epoch 48] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0048_33.2000.params
+[Epoch 49][Batch 99], Speed: 3.452 samples/sec, RPN_Conf=0.068,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.269,RCNN_SmoothL1=0.165,RCNN_Mask=0.273,RPNAcc=0.945,RPNL1Loss=0.209,RCNNAcc=0.836,RCNNL1Loss=1.195,MaskAcc=0.850,MaskFGAcc=0.484
+[Epoch 49][Batch 199], Speed: 3.587 samples/sec, RPN_Conf=0.070,RPN_SmoothL1=0.054,RCNN_CrossEntropy=0.268,RCNN_SmoothL1=0.170,RCNN_Mask=0.276,RPNAcc=0.945,RPNL1Loss=0.209,RCNNAcc=0.837,RCNNL1Loss=1.191,MaskAcc=0.850,MaskFGAcc=0.484
+[Epoch 49] Training cost: 64.347, RPN_Conf=0.070,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.269,RCNN_SmoothL1=0.170,RCNN_Mask=0.277
+[Epoch 49] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.338
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.729
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.266
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.442
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.339
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.724
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.284
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.9
+[Epoch 49] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0049_33.9000.params
+[Epoch 50] Set learning rate to 1.5000000000000002e-05
+[Epoch 50][Batch 99], Speed: 3.506 samples/sec, RPN_Conf=0.065,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.262,RCNN_SmoothL1=0.163,RCNN_Mask=0.277,RPNAcc=0.945,RPNL1Loss=0.208,RCNNAcc=0.837,RCNNL1Loss=1.185,MaskAcc=0.850,MaskFGAcc=0.484
+[Epoch 50][Batch 199], Speed: 3.619 samples/sec, RPN_Conf=0.066,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.258,RCNN_SmoothL1=0.162,RCNN_Mask=0.276,RPNAcc=0.946,RPNL1Loss=0.207,RCNNAcc=0.838,RCNNL1Loss=1.180,MaskAcc=0.850,MaskFGAcc=0.484
+[Epoch 50] Training cost: 63.883, RPN_Conf=0.065,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.259,RCNN_SmoothL1=0.164,RCNN_Mask=0.275
+[Epoch 50] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.338
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.724
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.268
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.137
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.444
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.444
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.8
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.718
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.282
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.433
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.5
+[Epoch 50] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0050_33.5000.params
+[Epoch 51][Batch 99], Speed: 3.515 samples/sec, RPN_Conf=0.062,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.265,RCNN_SmoothL1=0.172,RCNN_Mask=0.279,RPNAcc=0.946,RPNL1Loss=0.207,RCNNAcc=0.838,RCNNL1Loss=1.175,MaskAcc=0.851,MaskFGAcc=0.484
+[Epoch 51][Batch 199], Speed: 3.531 samples/sec, RPN_Conf=0.067,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.265,RCNN_SmoothL1=0.168,RCNN_Mask=0.277,RPNAcc=0.946,RPNL1Loss=0.206,RCNNAcc=0.839,RCNNL1Loss=1.171,MaskAcc=0.851,MaskFGAcc=0.484
+[Epoch 51] Training cost: 64.245, RPN_Conf=0.068,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.268,RCNN_SmoothL1=0.168,RCNN_Mask=0.277
+[Epoch 51] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.337
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.721
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.261
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.136
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.442
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.442
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.7
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.720
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.275
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.433
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.433
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.5
+[Epoch 51] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0051_33.5000.params
+[Epoch 52][Batch 99], Speed: 3.604 samples/sec, RPN_Conf=0.063,RPN_SmoothL1=0.049,RCNN_CrossEntropy=0.247,RCNN_SmoothL1=0.163,RCNN_Mask=0.272,RPNAcc=0.946,RPNL1Loss=0.205,RCNNAcc=0.839,RCNNL1Loss=1.166,MaskAcc=0.851,MaskFGAcc=0.484
+[Epoch 52][Batch 199], Speed: 3.439 samples/sec, RPN_Conf=0.068,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.263,RCNN_SmoothL1=0.173,RCNN_Mask=0.279,RPNAcc=0.947,RPNL1Loss=0.205,RCNNAcc=0.840,RCNNL1Loss=1.162,MaskAcc=0.852,MaskFGAcc=0.484
+[Epoch 52] Training cost: 64.372, RPN_Conf=0.066,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.262,RCNN_SmoothL1=0.172,RCNN_Mask=0.279
+[Epoch 52] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.253
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.137
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.336
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.721
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.279
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.432
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.6
+[Epoch 52] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0052_33.6000.params
+[Epoch 53][Batch 99], Speed: 3.523 samples/sec, RPN_Conf=0.064,RPN_SmoothL1=0.049,RCNN_CrossEntropy=0.265,RCNN_SmoothL1=0.161,RCNN_Mask=0.272,RPNAcc=0.947,RPNL1Loss=0.204,RCNNAcc=0.840,RCNNL1Loss=1.157,MaskAcc=0.852,MaskFGAcc=0.484
+[Epoch 53][Batch 199], Speed: 3.601 samples/sec, RPN_Conf=0.064,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.263,RCNN_SmoothL1=0.165,RCNN_Mask=0.277,RPNAcc=0.947,RPNL1Loss=0.203,RCNNAcc=0.841,RCNNL1Loss=1.153,MaskAcc=0.852,MaskFGAcc=0.484
+[Epoch 53] Training cost: 64.183, RPN_Conf=0.066,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.266,RCNN_SmoothL1=0.168,RCNN_Mask=0.279
+[Epoch 53] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.260
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.436
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.137
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.4
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.336
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.725
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.275
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.6
+[Epoch 53] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0053_33.6000.params
+[Epoch 54][Batch 99], Speed: 3.309 samples/sec, RPN_Conf=0.074,RPN_SmoothL1=0.055,RCNN_CrossEntropy=0.292,RCNN_SmoothL1=0.189,RCNN_Mask=0.289,RPNAcc=0.948,RPNL1Loss=0.203,RCNNAcc=0.841,RCNNL1Loss=1.149,MaskAcc=0.852,MaskFGAcc=0.484
+[Epoch 54][Batch 199], Speed: 3.700 samples/sec, RPN_Conf=0.069,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.274,RCNN_SmoothL1=0.178,RCNN_Mask=0.283,RPNAcc=0.948,RPNL1Loss=0.202,RCNNAcc=0.841,RCNNL1Loss=1.145,MaskAcc=0.853,MaskFGAcc=0.485
+[Epoch 54] Training cost: 64.676, RPN_Conf=0.067,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.268,RCNN_SmoothL1=0.174,RCNN_Mask=0.280
+[Epoch 54] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.336
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.259
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.439
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.137
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.442
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.442
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.6
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.719
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.278
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.433
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 54] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0054_33.4000.params
+[Epoch 55][Batch 99], Speed: 3.546 samples/sec, RPN_Conf=0.071,RPN_SmoothL1=0.053,RCNN_CrossEntropy=0.262,RCNN_SmoothL1=0.163,RCNN_Mask=0.273,RPNAcc=0.948,RPNL1Loss=0.202,RCNNAcc=0.842,RCNNL1Loss=1.140,MaskAcc=0.853,MaskFGAcc=0.485
+[Epoch 55][Batch 199], Speed: 3.561 samples/sec, RPN_Conf=0.069,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.262,RCNN_SmoothL1=0.164,RCNN_Mask=0.272,RPNAcc=0.948,RPNL1Loss=0.201,RCNNAcc=0.842,RCNNL1Loss=1.136,MaskAcc=0.853,MaskFGAcc=0.485
+[Epoch 55] Training cost: 63.722, RPN_Conf=0.068,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.262,RCNN_SmoothL1=0.166,RCNN_Mask=0.273
+[Epoch 55] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.333
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.253
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.137
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.439
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.3
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.717
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.286
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.5
+[Epoch 55] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0055_33.5000.params
+[Epoch 56][Batch 99], Speed: 3.580 samples/sec, RPN_Conf=0.066,RPN_SmoothL1=0.050,RCNN_CrossEntropy=0.261,RCNN_SmoothL1=0.164,RCNN_Mask=0.273,RPNAcc=0.949,RPNL1Loss=0.200,RCNNAcc=0.843,RCNNL1Loss=1.132,MaskAcc=0.854,MaskFGAcc=0.485
+[Epoch 56][Batch 199], Speed: 3.547 samples/sec, RPN_Conf=0.066,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.261,RCNN_SmoothL1=0.165,RCNN_Mask=0.276,RPNAcc=0.949,RPNL1Loss=0.200,RCNNAcc=0.843,RCNNL1Loss=1.128,MaskAcc=0.854,MaskFGAcc=0.485
+[Epoch 56] Training cost: 63.594, RPN_Conf=0.068,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.265,RCNN_SmoothL1=0.167,RCNN_Mask=0.276
+[Epoch 56] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.719
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.258
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.136
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.4
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.716
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.285
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 56] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0056_33.4000.params
+[Epoch 57][Batch 99], Speed: 3.486 samples/sec, RPN_Conf=0.067,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.259,RCNN_SmoothL1=0.168,RCNN_Mask=0.272,RPNAcc=0.949,RPNL1Loss=0.199,RCNNAcc=0.843,RCNNL1Loss=1.124,MaskAcc=0.854,MaskFGAcc=0.485
+[Epoch 57][Batch 199], Speed: 3.588 samples/sec, RPN_Conf=0.068,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.264,RCNN_SmoothL1=0.169,RCNN_Mask=0.275,RPNAcc=0.949,RPNL1Loss=0.199,RCNNAcc=0.844,RCNNL1Loss=1.121,MaskAcc=0.854,MaskFGAcc=0.485
+[Epoch 57] Training cost: 63.989, RPN_Conf=0.067,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.263,RCNN_SmoothL1=0.167,RCNN_Mask=0.274
+[Epoch 57] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.718
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.260
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.137
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.715
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.282
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.433
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 57] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0057_33.4000.params
+[Epoch 58][Batch 99], Speed: 3.589 samples/sec, RPN_Conf=0.064,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.260,RCNN_SmoothL1=0.164,RCNN_Mask=0.271,RPNAcc=0.949,RPNL1Loss=0.198,RCNNAcc=0.844,RCNNL1Loss=1.116,MaskAcc=0.855,MaskFGAcc=0.485
+[Epoch 58][Batch 199], Speed: 3.532 samples/sec, RPN_Conf=0.066,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.269,RCNN_SmoothL1=0.172,RCNN_Mask=0.278,RPNAcc=0.950,RPNL1Loss=0.198,RCNNAcc=0.844,RCNNL1Loss=1.113,MaskAcc=0.855,MaskFGAcc=0.485
+[Epoch 58] Training cost: 63.723, RPN_Conf=0.067,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.272,RCNN_SmoothL1=0.173,RCNN_Mask=0.279
+[Epoch 58] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.719
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.260
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.137
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.5
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.335
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.718
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.287
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.432
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.436
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.436
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.5
+[Epoch 58] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0058_33.5000.params
+[Epoch 59][Batch 99], Speed: 3.400 samples/sec, RPN_Conf=0.067,RPN_SmoothL1=0.052,RCNN_CrossEntropy=0.284,RCNN_SmoothL1=0.182,RCNN_Mask=0.280,RPNAcc=0.950,RPNL1Loss=0.197,RCNNAcc=0.845,RCNNL1Loss=1.110,MaskAcc=0.855,MaskFGAcc=0.485
+[Epoch 59][Batch 199], Speed: 3.620 samples/sec, RPN_Conf=0.066,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.270,RCNN_SmoothL1=0.175,RCNN_Mask=0.277,RPNAcc=0.950,RPNL1Loss=0.197,RCNNAcc=0.845,RCNNL1Loss=1.107,MaskAcc=0.855,MaskFGAcc=0.485
+[Epoch 59] Training cost: 64.423, RPN_Conf=0.066,RPN_SmoothL1=0.051,RCNN_CrossEntropy=0.269,RCNN_SmoothL1=0.173,RCNN_Mask=0.277
+[Epoch 59] Validation: 
+~~~~ Summary bbox metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.333
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.719
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.257
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.436
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.017
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for bbox ~~~~
+=33.3
+~~~~ Summary segm metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.716
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.277
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.430
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.016
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.432
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.432
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+~~~~ Mean AP for segm ~~~~
+=33.4
+[Epoch 59] Saving parameters to logs\60_0.0015_0.1_35-50-100-100_0.8_0.0001\mask_rcnn_resnet50_v1b_coco_0059_33.4000.params
