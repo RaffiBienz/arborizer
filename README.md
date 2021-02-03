@@ -1,4 +1,4 @@
-# Tree species segmentation and classification algorithm for SwissiamgeRS 2018 (Swisstopo)
+# Tree species segmentation and classification algorithm for SwissimageRS 2018 (Swisstopo)
 Created by Raffael Bienz
 
 The example orthophoto (test_area.tif) was kindly provided by Federal Office of Topography swisstopo (©swisstopo).
