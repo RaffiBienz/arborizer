@@ -62,7 +62,7 @@ classify_trees <- function(path_python, path_wa, path_masks_geo, path_tree_masks
     
     masks_bind_clean <- st_read(dsn=path_masks_geo,layer = "masks_bind_clean2",quiet = T,promote_to_multi=F)
     
-    command <- paste0(path_python,"python.exe ", gsub("/", "\\\\", wd), "\\src\\predict_ba_for_wa_folder.py")
+    command <- paste0(path_python,"python /root/arborizer/src/predict_ba_for_wa_folder.py")
     system(paste(command, w, gsub("/", "\\\\", wd)),wait=T,invisible = F)
     
     pred_table <- read.table(paste0(path_tree_masks,"/","predictions.txt"), sep=" ")

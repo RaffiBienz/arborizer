@@ -3,18 +3,22 @@ import mxnet as mx
 from PIL import Image
 import sys
 from os import listdir
+from pathlib import Path
+
 
 
 folder_id= sys.argv[1]
-wd = sys.argv[2]
-folder_path = wd + r'result\\' + folder_id + r'\pics'
-folder_target = wd + r'result\\' + folder_id + r'\masks'
+wd = Path("/root/arborizer")
+folder_path = wd/Path('result')/folder_id/Path('pics')
+folder_target = wd/Path('result')/folder_id/Path('masks')
 included_extensions = [ 'jpg',"png"]
-ctx=[mx.gpu(0)]
+ctx=[mx.cpu(0)]
 
 if __name__== "__main__":
-    net = model_zoo.get_model('mask_rcnn_resnet50_v1b_coco', pretrained=True, root=wd + r'src\resnet', ctx=ctx)
-    net.load_parameters(wd + r"src\resnet\mask_rcnn_resnet50_v1b_coco_best.params", ctx=ctx)
+    net = model_zoo.get_model('mask_rcnn_resnet50_v1b_coco', pretrained=True, root=str(wd/Path('src\resnet')), ctx=ctx)
+    path_params = Path("/root/arborizer/src/resnet/mask_rcnn_resnet50_v1b_coco_best.params")
+    print(path_params)
+    net.load_parameters(str(path_params), ctx=ctx)
     net.collect_params().reset_ctx(ctx)
 
     files = [fn for fn in listdir(folder_path)
@@ -32,10 +36,12 @@ if __name__== "__main__":
             print(pic_id + " done")
         else:
             #try:
-                im_fname = utils.download(r'temp.jpg',
-                            path= wd + 'result\\' + folder_id + r'\pics\\pic_' + pic_id + r'.jpg')
+                path= str(wd/Path('result')/Path(folder_id)/Path('pics/pic_'+pic_id + '.jpg'))
+                print("Path is {}".format(path))
+                # im_fname = utils.download('temp.jpg', path=path)
+                
 
-                x, orig_img = data.transforms.presets.rcnn.load_test(im_fname, short=500)
+                x, orig_img = data.transforms.presets.rcnn.load_test(path, short=500)
 
                 ids, scores, bboxes, masks = [xx[0].asnumpy() for xx in net(x.as_in_context(ctx[0]))]
 
@@ -47,7 +53,7 @@ if __name__== "__main__":
                 for i in range(len(masks)):
                     # mask_sum = utils.viz.plot_mask(im_empty, masks)
                     mask_img = Image.fromarray(masks[i])
-                    img_name = wd + 'result\\' + folder_id + r'\masks\mask_' + pic_id + "_" + str(i) + ".png"
+                    img_name = str(wd/Path('result')/folder_id/Path('masks/mask_'+ pic_id + "_" + str(i) + ".png"))
                     mask_img.save(img_name)
             #except Exception:
             #   print(file + " failed")

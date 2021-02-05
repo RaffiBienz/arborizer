@@ -22,7 +22,7 @@ remove_tempfiles = TRUE # Should temporary files be removed?
 # If a suitable GPU is available, set ctx=[mx.gpu(0)] in predict_masks_folder.py for faster instance segmentation.
 # If no suitable GPU is available, set ctx=[mx.cpu(0)]
 # Path to Python or Anaconda environment:
-path_python = "C:\\Python36\\" # With double backslash!
+path_python = "" # With double backslash!
 
 
 

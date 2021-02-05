@@ -7,7 +7,7 @@
 #------------------------------------------------------------------------------------------------------------------------#
 #### Configurations ####
 # Set working directory and create necessary folders
-wd <- "C:/Auswertungen/baumarten_2019/src/arborizer/"
+wd <- "/root/arborizer/"
 setwd(wd)
 dir.create(paste0(wd,"wd"), showWarnings = FALSE)
 dir.create(paste0(wd,"temp"), showWarnings = FALSE)
@@ -113,7 +113,7 @@ for (w in as.numeric(wa$Id)) {
   ## Create masks with instance segmentation ##
   # Execute py script for instance segmentation:
   print("Starting instance segmentation")
-  command <- paste0(path_python,"python.exe ", gsub("/", "\\\\", wd), "\\src\\predict_masks_folder.py")
+  command <- paste0(path_python,"python /root/arborizer/src/predict_masks_folder.py")
   system(paste(command, w, gsub("/", "\\\\", wd)),wait=T,invisible = T)
   print("Instance segmentation (tree crown delination) completed")
   
