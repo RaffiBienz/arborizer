@@ -58,7 +58,7 @@ if (ortho_split){
 
 #------------------------------------------------------------------------------------------------------------------------#
 #### Calculation ####
-
+registerDoParallel(number_of_cores)
 for (w in as.numeric(wa$Id)) {
   if (file.exists(paste0("result/",w,"/masks_bind_ba_",w,".shp"))){
     print(paste(w,"already existing"))
@@ -96,8 +96,6 @@ for (w in as.numeric(wa$Id)) {
 
   
   ## Clip ortho to fishcells ##
-  registerDoParallel(number_of_cores) 
-
   foreach (i = 1:nrow(fish_sel), .packages = c("raster","rgdal","rgeos","imager")) %dopar% {
   #for (i in 1:nrow(fish_sel)){ # If warnings are desired, use for instead of foreach. But it's much slower.
     fl <- fish_sel[i,]
@@ -121,33 +119,36 @@ for (w in as.numeric(wa$Id)) {
   ## Read masks, georeference, aggregate and convert to polygon ##
   mask_converter(path_masks, path_masks_geo, number_of_cores, fish_sel)
   
+  n_masks <- length(list.files(path_masks))
   
-  ## Combine masks ##
-  mask_join(path_masks_geo)
+  if (n_masks > 0){
+    ## Combine masks ##
+    mask_join(path_masks_geo)
+    
   
-
-  ## Clean overlaps ##
-  clean_overlaps(path_masks_geo,1)
+    ## Clean overlaps ##
+    clean_overlaps(path_masks_geo,1)
+    
   
-
-  ## Clean overlaps again ##
-  clean_overlaps(path_masks_geo,2)
+    ## Clean overlaps again ##
+    clean_overlaps(path_masks_geo,2)
+    
+    
+    ## Cut masks from orthophoto ##
+    print("Start cutting masks from orthophoto")
+    if (ortho_split){
+      cut_ortho(path_masks_geo, path_tree_masks, NULL, wd, RGBI,ortho_split,ortho_list)
+    } else {
+      cut_ortho(path_masks_geo, path_tree_masks, ortho, wd, RGBI,ortho_split,NULL)}
   
-  
-  ## Cut masks from orthophoto ##
-  print("Start cutting masks from orthophoto")
-  if (ortho_split){
-    cut_ortho(path_masks_geo, path_tree_masks, NULL, wd, RGBI,ortho_split,ortho_list)
-  } else {
-    cut_ortho(path_masks_geo, path_tree_masks, ortho, wd, RGBI,ortho_split,NULL)}
-
-  
-  
-  ## Predict tree species per mask ##
-  print("Start tree species classification")
-  classify_trees(path_python, path_wa, path_masks_geo, path_tree_masks, w)
-  
-  
+    
+    
+    ## Predict tree species per mask ##
+    print("Start tree species classification")
+    classify_trees(path_python, path_wa, path_masks_geo, path_tree_masks, w)
+    
+  } else {print(paste("No trees detected in",w))}
+    
   ## Remove temporary files ##
   if (remove_tempfiles){
     unlink(path_pics, recursive=TRUE)

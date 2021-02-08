@@ -23,7 +23,6 @@ mask_converter <- function(path_masks, path_masks_geo, number_of_cores, fish){
       foldername <- max(dirs)+step
     }
     
-    registerDoParallel(number_of_cores) 
     print("start conversion to polygon")
     foreach (file = files, .packages = c("raster","sf","rgdal","rgeos")) %dopar% {
       mask_ras <- raster(paste0(path_masks,"/",file))

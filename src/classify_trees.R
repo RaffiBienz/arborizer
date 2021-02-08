@@ -4,8 +4,6 @@
 cut_ortho <- function(path_masks_geo, path_tree_masks, ortho, wd,RGBI,ortho_split,ortho_list){
   masks_bind_clean <- st_read(dsn=path_masks_geo,layer = "masks_bind_clean2",quiet = T,promote_to_multi=F)
   
-  registerDoParallel(number_of_cores)
-  
   foreach (i = 1:nrow(masks_bind_clean), .packages = c("raster","sf","rgdal","rgeos","imager"),.combine = c, .verbose = F) %dopar% {
     rasterOptions(tmpdir= paste0(wd,"temp"),todisk=TRUE, progress="")
     mask <- masks_bind_clean[i,]
