@@ -41,7 +41,7 @@ git lfs pull # to download large files
 ```
 
 ### Setup Python
-- Install Python or Anaconda
+- Install Python 3.6.7 (https://www.python.org/ftp/python/3.6.7/python-3.6.7-amd64.exe). On Windows higher versions cause problems. On Linux higher versions work.
 - Add the path to the python or an anaconda environment in config.R. If python is defined as a environment variable just type "pyhton" in config.R.
 - Install packages mxnet (1.5.0) and gluoncv (0.4.0) -> see requirements.txt
 - If a suitable GPU is available and the CUDA-environemnt is installed, instance segmentation should automatically use the GPU. Otherwise the CPU is used, which is much slower. If problems occur, set ctx=[mx.cpu(0)] in predict_masks_folder.py (line 13) manually.
@@ -50,7 +50,7 @@ git lfs pull # to download large files
 
 Open Anaconda Powershell Prompt and type:
 ```
-conda create -y -n arborizer
+conda create -y -n arborizer python==3.6.7
 conda activate arborizer
 pip install -r .\requirements.txt
 ```
