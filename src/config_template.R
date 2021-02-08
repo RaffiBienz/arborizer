@@ -2,29 +2,17 @@
 # Set the working directory (wd) in main.R
 
 # Load packages or install if they do not exist
-if (!require("rgdal")) install.packages("rgdal")
-if (!require("rgeos")) install.packages("rgeos")
-if (!require("raster")) install.packages("raster")
-if (!require("imager")) install.packages("imager")
-if (!require("doParallel")) install.packages("doParallel")
-if (!require("foreach")) install.packages("foreach")
-if (!require("sf")) install.packages("sf")
+source("src/install_packages.R")
 
+### General setup
 number_of_cores = 7 # Number of cores used for certain calculations
 remove_tempfiles = TRUE # Should temporary files be removed?
 
 
 ### Python
-# Install Python 3.6.7 (https://www.python.org/ftp/python/3.6.7/python-3.6.7-amd64.exe)
-# Install packages mxnet (1.5.0) and gluoncv (0.4.0)
-# pip install mxnet==1.5.0
-# pip install gluoncv==0.4.0
-# If a suitable GPU is available, set ctx=[mx.gpu(0)] in predict_masks_folder.py for faster instance segmentation.
-# If no suitable GPU is available, set ctx=[mx.cpu(0)]
+# Install Python and requirements.txt
 # Path to Python or Anaconda environment:
-path_python = "C:\\Python36\\" # With double backslash!
-
-
+path_python = file.path("C:/Python36/python.exe") # Path to python.exe or just "python" if defined as environment variable
 
 
 ### Fishnet
@@ -35,13 +23,16 @@ new_fishnet = FALSE
 location_fishnet = "data"
 name_fishnet = "fishnet_30m"
 
+
 ### Vegetation height model (1x1m). Areas > 21m = 1 / Areas < 21m = 0
 location_vhm = "data/vhm_recl_foc10.tif"
+
 
 ### Aerial imagery (RGBI, 10x10cm)
 ortho_split = F # is orthophoto split in subtiles?
 location_ortho = "data/test_area.tif" # single tif file oder folder with subtiles
 RGBI = FALSE # If orthophoto RGBI set TRUE. If orthophoto is IRGB set FALSE.
+
 
 ### Forest delination (best with a buffer of 10m). Attribute "Id" must be present.
 location_forest_delination = "data"

@@ -7,7 +7,7 @@
 #------------------------------------------------------------------------------------------------------------------------#
 #### Configurations ####
 # Set working directory and create necessary folders
-wd <- "C:/Auswertungen/baumarten_2019/src/arborizer/"
+wd <- file.path("")
 setwd(wd)
 dir.create(paste0(wd,"wd"), showWarnings = FALSE)
 dir.create(paste0(wd,"temp"), showWarnings = FALSE)
@@ -54,8 +54,6 @@ if (ortho_split){
 } else{ortho <- brick(location_ortho)}
 
 
-
-
 #------------------------------------------------------------------------------------------------------------------------#
 #### Calculation ####
 registerDoParallel(number_of_cores)
@@ -71,15 +69,15 @@ for (w in as.numeric(wa$Id)) {
   fish_sel_id <- fish_sel_list[[1]]$ID
   fish_sel <- fishnet[fishnet@data$ID %in% fish_sel_id,] # select areas for wa element
   print(paste0("Number of cells: ", nrow(fish_sel)))
-  path_wa <- paste0("result/",w)
+  path_wa <- file.path("result/",w)
   dir.create(path_wa, showWarnings = FALSE)
-  path_pics <- paste0("result/",w,"/pics")
+  path_pics <- file.path("result/",w,"/pics")
   dir.create(path_pics, showWarnings = FALSE)
-  path_masks <- paste0("result/",w,"/masks")
+  path_masks <- file.path("result/",w,"/masks")
   dir.create(path_masks, showWarnings = FALSE)
-  path_masks_geo <- paste0("result/",w,"/masks_geo")
+  path_masks_geo <- file.path("result/",w,"/masks_geo")
   dir.create(path_masks_geo, showWarnings = FALSE)
-  path_tree_masks <- paste0("result/",w,"/tree_masks")
+  path_tree_masks <- file.path("result/",w,"/tree_masks")
   dir.create(path_tree_masks, showWarnings = FALSE)
   
   if (ortho_split){
@@ -111,10 +109,8 @@ for (w in as.numeric(wa$Id)) {
   ## Create masks with instance segmentation ##
   # Execute py script for instance segmentation:
   print("Starting instance segmentation")
-  command <- paste0(path_python,"python.exe ", gsub("/", "\\\\", wd), "\\src\\predict_masks_folder.py")
-  system(paste(command, w, gsub("/", "\\\\", wd)),wait=T,invisible = T)
+  system(paste(path_python, file.path(wd, "src/predict_masks_folder.py"), w,  wd),wait=T,invisible = T)
   print("Instance segmentation (tree crown delination) completed")
-  
   
   ## Read masks, georeference, aggregate and convert to polygon ##
   mask_converter(path_masks, path_masks_geo, number_of_cores, fish_sel)

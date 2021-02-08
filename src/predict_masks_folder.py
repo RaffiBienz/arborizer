@@ -3,18 +3,18 @@ import mxnet as mx
 from PIL import Image
 import sys
 from os import listdir
-
+from os import path
 
 folder_id= sys.argv[1]
 wd = sys.argv[2]
-folder_path = wd + r'result\\' + folder_id + r'\pics'
-folder_target = wd + r'result\\' + folder_id + r'\masks'
+folder_path = path.join(wd, 'result', str(folder_id),'pics')
+folder_target = path.join(wd,'result', str(folder_id), 'masks')
 included_extensions = [ 'jpg',"png"]
-ctx=[mx.gpu(0)]
+ctx = [mx.gpu()] if mx.test_utils.list_gpus() else [mx.cpu()]
 
 if __name__== "__main__":
-    net = model_zoo.get_model('mask_rcnn_resnet50_v1b_coco', pretrained=True, root=wd + r'src\resnet', ctx=ctx)
-    net.load_parameters(wd + r"src\resnet\mask_rcnn_resnet50_v1b_coco_best.params", ctx=ctx)
+    net = model_zoo.get_model('mask_rcnn_resnet50_v1b_coco', pretrained=True, root=path.join(wd,'src/resnet'), ctx=ctx)
+    net.load_parameters(path.join(wd, "src/resnet/mask_rcnn_resnet50_v1b_coco_best.params"), ctx=ctx)
     net.collect_params().reset_ctx(ctx)
 
     files = [fn for fn in listdir(folder_path)
@@ -33,7 +33,7 @@ if __name__== "__main__":
         else:
             #try:
                 im_fname = utils.download(r'temp.jpg',
-                            path= wd + 'result\\' + folder_id + r'\pics\\pic_' + pic_id + r'.jpg')
+                            path= path.join(wd, 'result', str(folder_id), 'pics/pic_' + str(pic_id) + '.jpg'))
 
                 x, orig_img = data.transforms.presets.rcnn.load_test(im_fname, short=500)
 
@@ -47,7 +47,7 @@ if __name__== "__main__":
                 for i in range(len(masks)):
                     # mask_sum = utils.viz.plot_mask(im_empty, masks)
                     mask_img = Image.fromarray(masks[i])
-                    img_name = wd + 'result\\' + folder_id + r'\masks\mask_' + pic_id + "_" + str(i) + ".png"
+                    img_name = path.join(wd, 'result', str(folder_id), 'masks/mask_' + str(pic_id) + "_" + str(i) + ".png")
                     mask_img.save(img_name)
             #except Exception:
             #   print(file + " failed")
