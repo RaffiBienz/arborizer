@@ -9,10 +9,10 @@
 # Set working directory and create necessary folders
 wd <- file.path("")
 setwd(wd)
-dir.create(paste0(wd,"wd"), showWarnings = FALSE)
-dir.create(paste0(wd,"temp"), showWarnings = FALSE)
-dir.create(paste0(wd,"data"), showWarnings = FALSE)
-dir.create(paste0(wd,"result"), showWarnings = FALSE)
+dir.create(file.path(wd,"wd"), showWarnings = FALSE)
+dir.create(file.path(wd,"temp"), showWarnings = FALSE)
+dir.create(file.path(wd,"data"), showWarnings = FALSE)
+dir.create(file.path(wd,"result"), showWarnings = FALSE)
 
 
 #------------------------------------------------------------------------------------------------------------------------#
@@ -22,7 +22,7 @@ source("src/create_fishnet.R")
 source("src/mask_processing.R")
 source("src/classify_trees.R")
 
-rasterOptions(tmpdir = paste0(wd,"/temp"),todisk = TRUE, progress = "")
+rasterOptions(tmpdir = file.path(wd,"temp"),todisk = TRUE, progress = "")
 
 
 #------------------------------------------------------------------------------------------------------------------------#
