@@ -7,7 +7,7 @@
 #------------------------------------------------------------------------------------------------------------------------#
 #### Configurations ####
 # Set working directory and create necessary folders
-wd <- file.path("")
+wd <- file.path("C:/Auswertungen/baumarten_2019/src/arborizer/")
 setwd(wd)
 dir.create(file.path(wd,"wd"), showWarnings = FALSE)
 dir.create(file.path(wd,"temp"), showWarnings = FALSE)
@@ -115,9 +115,9 @@ for (w in as.numeric(wa$Id)) {
   ## Read masks, georeference, aggregate and convert to polygon ##
   mask_converter(path_masks, path_masks_geo, number_of_cores, fish_sel)
   
-  n_masks <- length(list.files(path_masks))
+  n_masks <- length(list.files(path_masks_geo, recursive=TRUE))
   
-  if (n_masks > 0){
+  if (n_masks > 1){
     ## Combine masks ##
     mask_join(path_masks_geo)
     

@@ -3,9 +3,9 @@
 /result/*
 !/result/604_precomputed
 !/result/627_precomputed
-/src/mobilenet/alte_modelle
-/src/resnet/alte_modelle
+/src/mobilenet
+/src/resnet
 /src/config.R
 /src/configs
-/data/kanton
+/data/*
 .Rhistory

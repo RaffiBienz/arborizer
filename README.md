@@ -33,12 +33,14 @@ Two different neural networks are used: One for the segmentation of the tree cro
 
 ## Usage
 
-### Clone repository
+### Clone repository and download data
 ```
 git clone https://github.com/RaffiBienz/arborizer.git
-git lfs install # if not already installed
-git lfs pull # to download large files
 ```
+Download example data and put it into the data folder: https://drive.google.com/file/d/1VJGAITIG_-k09earWOdKSjAnBkIJNyoO/view?usp=sharing
+
+Download parameters for the neural networks and put the two folders into the src folder: https://drive.google.com/file/d/1sSN48YJ6Prjyg_sxfGq5fi22aMJGzagQ/view?usp=sharing
+
 
 ### Setup Python
 - Install Python 3.6.7 (https://www.python.org/ftp/python/3.6.7/python-3.6.7-amd64.exe). On Windows higher versions cause problems. On Linux higher versions work.
