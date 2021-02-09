@@ -8,4 +8,5 @@
 /src/config.R
 /src/configs
 /data/*
+!/data
 .Rhistory
