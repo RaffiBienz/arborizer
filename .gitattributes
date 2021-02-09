@@ -1,3 +1,0 @@
-*.params filter=lfs diff=lfs merge=lfs -text
-*.tif filter=lfs diff=lfs merge=lfs -text
-*.ovr filter=lfs diff=lfs merge=lfs -text
