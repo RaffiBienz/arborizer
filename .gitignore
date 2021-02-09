@@ -8,5 +8,5 @@
 /src/config.R
 /src/configs
 /data/*
-!/data/link_to_example_data.txt
+!/data/link_to _example_data.txt
 .Rhistory
