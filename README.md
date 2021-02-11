@@ -44,6 +44,7 @@ Download parameters for the neural networks and put the two folders into the src
 
 ### Setup Python
 - Install Python 3.6.7 (https://www.python.org/ftp/python/3.6.7/python-3.6.7-amd64.exe). On Windows higher versions cause problems. On Linux higher versions work.
+- Open config_template.R and save as config.R.
 - Add the path to the python or an anaconda environment in config.R. If python is defined as a environment variable just type "pyhton" in config.R.
 - Install packages mxnet (1.5.0) and gluoncv (0.4.0) -> see requirements.txt
 - If a suitable GPU is available and the CUDA-environemnt is installed, instance segmentation should automatically use the GPU. Otherwise the CPU is used, which is much slower. If problems occur, set ctx=[mx.cpu(0)] in predict_masks_folder.py (line 13) manually.
@@ -56,12 +57,12 @@ conda create -y -n arborizer python==3.6.7
 conda activate arborizer
 pip install -r .\requirements.txt
 ```
-Add the path to the conda environment in config.R. Typically: C:/Users/USERNAME/.conda/envs/arborizer/python.exe
+Open config_template.R, save as config.R and add the path to the conda environment in config.R. Typically: C:/Users/USERNAME/.conda/envs/arborizer/python.exe
 
 ### Setup R
 - Install R and if desired RStudio
 - Required packages: rgdal, rgeos, raster, imager, doParallel, foreach, sf (see install_packages.R)
-- These packages are automatically installed when main.R is run.
+- These packages are automatically installed when, main.R is run.
 
 ### Docker
 Alternatively to the above setup you can also use the Dockerfile provided.
@@ -73,11 +74,15 @@ Alternatively to the above setup you can also use the Dockerfile provided.
 - Fishnet of the area (30x30 m / shapefile). This can be generated with main.R based on the forest delineation (set new_fishnet = True in config.R)
 
 ### Execute script
-- Open config_template.R, set variables (at least python_path) and save as config.R.
-- Open main.R and set the working directory to arborizer folder.
+- If desired, adjust further settings in config.R (at least python_path, see Setup Python).
+- Open main.R and set the working directory to the arborizer folder.
 - Run main.R (in a shell or via RStudio)
+- Check the result folder for the output.
 
 ## Performance
 Segmentation achieved a mean average precision of 33.4 on the validation dataset. Evergreen trees are not detected as well as deciduous trees. This may be due to the relatively small crowns of evergreen trees. Regaring deciduous trees, the algorithm has the tendency to conjoin the crowns of multiple trees.
 
 Classification achieved an accuracy of 85 % on the validation dataset. However, the algorithm works better for evergreen trees than for deciduous trees.
+
+
+![](example.png)
