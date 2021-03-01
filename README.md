@@ -60,7 +60,7 @@ pip install -r .\requirements.txt
 Open config_template.R, save as config.R and add the path to the conda environment in config.R. Typically: C:/Users/USERNAME/.conda/envs/arborizer/python.exe
 
 ### Setup R
-- Install R and if desired RStudio
+- Install R and if desired RStudio.
 - Required packages: rgdal, rgeos, raster, imager, doParallel, foreach, sf (see install_packages.R)
 - These packages are automatically installed when, main.R is run.
 
@@ -76,7 +76,7 @@ Alternatively to the above setup you can also use the Dockerfile provided.
 ### Execute script
 - If desired, adjust further settings in config.R (at least python_path, see Setup Python).
 - Open main.R and set the working directory to the arborizer folder.
-- Run main.R (in a shell or via RStudio)
+- Run main.R (in a shell or via RStudio).
 - Check the result folder for the output.
 
 ## Performance

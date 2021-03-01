@@ -34,7 +34,7 @@ clip_fishcells <- function(wa_id,fl,ortho,vhm,RGBI,ortho_split,ortho_list){
       
       vhm_temp <- crop(vhm,ext)
       
-      if(sum(vhm_temp[],na.rm=T)>10 ){ #With areas heigher than 21m (BH1)?
+      if(sum(vhm_temp[],na.rm=T)>10 & dim(vhm_temp)[1]==dim(vhm_temp)[2] ){ #With areas heigher than 21m (BH1)?
         
         if (ortho_split){
           ras_sel <- list()
@@ -56,7 +56,7 @@ clip_fishcells <- function(wa_id,fl,ortho,vhm,RGBI,ortho_split,ortho_list){
           
         } else {
             if (is.null(intersect(ext,extent(ortho)))){
-              print("Cell not overlapping orthophoto")
+              print("Cell not overlapping orthophoto or VHM")
               break
             } else {ras <- crop(ortho,ext)}
           }
