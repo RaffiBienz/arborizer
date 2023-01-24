@@ -4,7 +4,7 @@
 cut_ortho <- function(path_masks_geo, path_tree_masks, ortho, wd,RGBI,ortho_split,ortho_list){
   masks_bind_clean <- st_read(dsn=path_masks_geo,layer = "masks_bind_clean2",quiet = T,promote_to_multi=F)
   
-  foreach (i = 1:nrow(masks_bind_clean), .packages = c("raster","sf","rgdal","rgeos","imager"),.combine = c, .verbose = F) %dopar% {
+  for(i in 1:nrow(masks_bind_clean)){
     rasterOptions(tmpdir= file.path(wd,"temp"),todisk=TRUE, progress="")
     mask <- masks_bind_clean[i,]
     
@@ -29,11 +29,13 @@ cut_ortho <- function(path_masks_geo, path_tree_masks, ortho, wd,RGBI,ortho_spli
             ras_sel$fun <- max
             ortho_ext <- do.call(mosaic, ras_sel)}
           
+          ortho_mask <- mask(ortho_ext,vect(mask[1,]))
+          
         } else {
-          ortho_ext <- crop(ortho,mask[1,])
+          ortho_ext <- terra::crop(ortho,mask[1,])
+          ortho_mask <- terra::mask(ortho_ext,vect(mask[1,]))
         }
         
-        ortho_mask <- mask(ortho_ext,mask[1,])
 
         if (RGBI){
           cimg <- as.cimg(c(ortho_mask[][,4],ortho_mask[][,1],ortho_mask[][,2]),x=ncol(ortho_mask),y=nrow(ortho_mask),cc=3) # convert RGBI to IRG
@@ -67,7 +69,7 @@ classify_trees <- function(path_python, path_wa, path_masks_geo, path_tree_masks
     masks_bind_ba <- masks_bind_clean
     pred <- pred_table[match(masks_bind_ba$id, pred_table[,1]),2:3]
     
-    table_ba <- data.frame(id=0:13,ba=c("ah","bu","do","ei","es","fi","fo","ki","la","li","rei","ta","ul","un"))
+    table_ba <- data.frame(id=0:12,ba=c("ah","bu","do","ei","es","fi","fo","ki","la","li", "ta","ul","un"))
     pred_ba <- table_ba[match(pred[,1],table_ba[,1]),2]
     
     masks_bind_ba <- cbind(masks_bind_ba,pred_ba,round(pred[,2],2))

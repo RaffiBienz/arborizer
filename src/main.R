@@ -7,7 +7,7 @@
 #------------------------------------------------------------------------------------------------------------------------#
 #### Configurations ####
 # Set working directory and create necessary folders
-wd <- file.path("C:/arborizer/")
+wd <- file.path("C:/Auswertungen/arborizer/")
 setwd(wd)
 dir.create(file.path(wd,"wd"), showWarnings = FALSE)
 dir.create(file.path(wd,"temp"), showWarnings = FALSE)
