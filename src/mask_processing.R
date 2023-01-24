@@ -163,20 +163,27 @@ clean_overlaps <- function(path_masks_geo, number_of_cleanup){
         agg_tot <- st_sf(data.frame(st_union(masks_bind[sel_id,]))) # Overlapping masks are aggregated
         a_tot <- st_area(agg_tot)
         sel_id_order <- sel_id[order(st_area(masks_bind[sel_id,]))]
-        smallest <- masks_bind[sel_id_order[1],]
         
-        if (st_area(smallest)/a_tot > 0.6){ # If the smallest mask covers more than 60% of the aggregated mask, the aggregated mask is saved
-          agg_tot_sf <- st_sf(data.frame(id=sel_id[1],geometry=agg_tot))
-          masks_bind_ok2 <- rbind(masks_bind_ok2,agg_tot_sf)
-        } else{
-          masks_bind_ok2 <- rbind(masks_bind_ok2,smallest) # If not, smallest is saved
-          inter <- st_sf(data.frame(st_difference(agg_tot,smallest)))
-          inter_buf <- st_buffer(inter,-1)
-          inter_buf2 <- st_buffer(inter_buf,1)
-          inter_multy <- st_cast(inter_buf2, "POLYGON")
-          inter_sel <- inter_multy[order(st_area(inter_multy),decreasing = T),][1,]
-          masks_bind_ok2 <- rbind(masks_bind_ok2,inter_sel) # Aggregated mask - smallest mask is saved
+        for (sub_id in sel_id_order[-length(sel_id_order)] ){
+          a_tot <- st_area(agg_tot)
+          smallest <- masks_bind[sub_id,]
+          
+          if (st_area(smallest)/a_tot > 0.6){ # If the smallest mask covers more than 60% of the aggregated mask, the aggregated mask is saved
+            agg_tot <- st_sf(data.frame(id=sel_id[1],geometry=agg_tot$geometry))
+            break
+          } else{
+            masks_bind_ok2 <- rbind(masks_bind_ok2,smallest) # If not, smallest is saved
+            inter <- st_sf(data.frame(st_difference(agg_tot,smallest)))
+            inter <- inter[1,1]
+            inter_buf <- st_buffer(inter,-1)
+            inter_buf2 <- st_buffer(inter_buf,1)
+            inter_multy <- st_cast(inter_buf2, "POLYGON")
+            agg_tot <- inter_multy[order(st_area(inter_multy),decreasing = T),][1,]
+            
+          }
+          
         }
+        masks_bind_ok2 <- rbind(masks_bind_ok2,agg_tot) # Aggregated mask - smallest mask is saved
       }
       
       if (length(sel_id)==1){
