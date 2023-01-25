@@ -10,12 +10,12 @@ Two different neural networks are used: One for the segmentation of the tree cro
 
 ### Tree crown segmentation
 - Model: resnet50_v1b pretrained on the coco dataset. 
-- To train the model, for 260 plots tree crowns were manually segmented.
+- To train the model, crowns were manually segmented for 320 plots.
 
 ### Tree crown classification
 - Model: mobilenet1.0 pretrained on ImageNet.
-- To train the model, data of 3500 trees was collected in the field.
-- The following groups of tree species are differentiated:
+- To train the model, data from 3850 trees were collected in the field.
+- The following groups of tree species are distinguished:
     - Ahorne (Acer spp.)
     - Buche (Fagus sylvatica)
     - Douglasie (Pseudotsuga menziesii)
@@ -26,7 +26,6 @@ Two different neural networks are used: One for the segmentation of the tree cro
     - Kirschen (Prunus avium + padus)
     - Lärche (Larix decidua)
     - Linden (Tilia cordata + platyphyllos)
-    - Roteiche (Quercus rubra)
     - Tanne (Abies alba)
     - Übriges Laubholz
     - Übriges Nadelholz
@@ -37,9 +36,9 @@ Two different neural networks are used: One for the segmentation of the tree cro
 ```
 git clone https://github.com/RaffiBienz/arborizer.git
 ```
-Download example data and put it into the data folder: https://drive.google.com/file/d/1VJGAITIG_-k09earWOdKSjAnBkIJNyoO/view?usp=sharing
+Download example data and put it in the data folder: https://drive.google.com/file/d/1VJGAITIG_-k09earWOdKSjAnBkIJNyoO/view?usp=sharing
 
-Download parameters for the neural networks and put the two folders into the src folder: https://drive.google.com/file/d/1sSN48YJ6Prjyg_sxfGq5fi22aMJGzagQ/view?usp=sharing
+Download parameters for the neural networks and put the two folders in the src folder: https://drive.google.com/file/d/1sSN48YJ6Prjyg_sxfGq5fi22aMJGzagQ/view?usp=sharing
 
 
 ### Setup Python
@@ -62,7 +61,7 @@ Open config_template.R, save as config.R and add the path to the conda environme
 ### Setup R
 - Install R and if desired RStudio.
 - Required packages: rgdal, rgeos, raster, imager, doParallel, foreach, sf (see install_packages.R)
-- These packages are automatically installed when, main.R is run.
+- These packages are installed automatically when you run main.R.
 
 ### Docker
 Alternatively to the above setup you can also use the Dockerfile provided.
@@ -80,9 +79,18 @@ Alternatively to the above setup you can also use the Dockerfile provided.
 - Check the result folder for the output.
 
 ## Performance
-Segmentation achieved a mean average precision of 33.4 on the validation dataset. Evergreen trees are not detected as well as deciduous trees. This may be due to the relatively small crowns of evergreen trees. Regaring deciduous trees, the algorithm has the tendency to conjoin the crowns of multiple trees.
+Segmentation achieved a mean average precision of 30.9 on the validation dataset. Evergreen trees are not detected as well as deciduous trees. This may be due to the relatively small crowns of evergreen trees. Regaring deciduous trees, the algorithm has the tendency to conjoin the crowns of multiple trees.
 
-Classification achieved an accuracy of 85 % on the validation dataset. However, the algorithm works better for evergreen trees than for deciduous trees.
+Classification achieved an accuracy of 86 % on the validation dataset. However, the algorithm works better for evergreen trees than for deciduous trees.
 
 
 ![](example.png)
+
+## Change Log
+### Update January 2023
+The model was improved as follows:
+- New tree crown segmentation model trained with more data.
+- New tree crown classification model trained with more data.
+- Improved overlap cleanup.
+- Faster export of tree images.
+- Due to poor classification accuracy Quercus rubra was integrated into the class "Other deciduous trees".
