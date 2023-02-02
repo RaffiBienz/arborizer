@@ -38,7 +38,7 @@ mask_converter <- function(path_masks, path_masks_geo, number_of_cores, fish){
         mask_agg <- aggregate(mask_ras,10,max)
         if (max(mask_agg[])>0){
           mask_poly <- rasterToPolygons(mask_agg,dissolve = T,fun=function(x){x>0})
-          mask_dis <- disaggregate(mask_poly)
+          mask_dis <- disaggregate(as(st_as_sf(mask_poly), "Spatial"))
           if (nrow(mask_dis)>1){
             mask_poly <- mask_dis[order(area(mask_dis),decreasing = T)[1],]
           } else {
@@ -88,26 +88,31 @@ mask_join <- function(path_masks_geo){
     folders <- list.dirs(path=path_masks_geo,recursive = F)
     
     for (fold in folders){
+      
       if (!file.exists(paste0(fold,"/","masks_bind.shp"))){
         files <- list.files(path=fold,pattern = ".shp$",recursive = T)
+        if (length(files) > 0){
+          mask_name <- unlist(strsplit(unlist(strsplit(files[1],".shp")),"/")) # name of first mask
+          masks_bind <- st_read(dsn=fold,layer = mask_name,quiet=T) # read first mask
+          names(masks_bind) <- c("id","geometry")
+          
+          # first bind masks per folder
+          for (file in files[-1]){
+            mask_name <- unlist(strsplit(unlist(strsplit(file,".shp")),"/"))
+            mask_new <- st_read(dsn=fold,layer = mask_name,quiet = T)
+            #if (extent(mask_new)[1]<1000000 | extent(mask_new)[3]<1000000){
+            #  next}
+            names(mask_new) <- names(masks_bind)
+            masks_bind <- rbind(masks_bind,mask_new)
+          }
+          masks_bind$id <- c(1:nrow(masks_bind))
+          st_write(masks_bind,dsn=fold,layer = "masks_bind",driver = "ESRI Shapefile", quiet = T)
         
-        mask_name <- unlist(strsplit(unlist(strsplit(files[1],".shp")),"/")) # name of first mask
-        masks_bind <- st_read(dsn=fold,layer = mask_name,quiet=T) # read first mask
-        names(masks_bind) <- c("id","geometry")
-        
-        # first bind masks per folder
-        for (file in files[-1]){
-          mask_name <- unlist(strsplit(unlist(strsplit(file,".shp")),"/"))
-          mask_new <- st_read(dsn=fold,layer = mask_name,quiet = T)
-          #if (extent(mask_new)[1]<1000000 | extent(mask_new)[3]<1000000){
-          #  next}
-          names(mask_new) <- names(masks_bind)
-          masks_bind <- rbind(masks_bind,mask_new)
+        } else {
+          unlink(fold, recursive = T)
         }
-        masks_bind$id <- c(1:nrow(masks_bind))
-        st_write(masks_bind,dsn=fold,layer = "masks_bind",driver = "ESRI Shapefile", quiet = T)
-        
       }
+        
     }
     
     # combine all files from all folders

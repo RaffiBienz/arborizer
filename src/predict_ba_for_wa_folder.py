@@ -17,13 +17,13 @@ file_pred = open(path.join(folder_path,'predictions.txt'),'w')
 
 if __name__== '__main__':
 
-    included_extensions = [ 'png']
+    included_extensions = ['png']
     files = [fn for fn in listdir(folder_path)
              if any(fn.endswith(ext) for ext in included_extensions)]
 
 
     ctx = [mx.cpu()]
-    num_outputs=14
+    num_outputs=13
 
     model_name = 'mobilenet1.0'
     net = model_zoo.get_model(model_name, pretrained = True, root = path.join(wd_path,'src/mobilenet'))
@@ -32,7 +32,7 @@ if __name__== '__main__':
     net.output.initialize(init.Xavier(), ctx=ctx)
     net.collect_params().reset_ctx(ctx)
     net.hybridize()
-    net.load_parameters(path.join(wd_path,'src/mobilenet/mobilenet1.0_train_set_ba_19102020.params'), ctx=ctx)
+    net.load_parameters(path.join(wd_path,'src/mobilenet/model_04012023_e322_acc0.852.params'), ctx=ctx)
 
 
     for file in files:

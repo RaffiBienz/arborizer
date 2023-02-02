@@ -25,23 +25,23 @@ create_fishnet <- function(peri,resolution,dir){
 #------------------------------------------------------------------------------------------------------------------------#
 clip_fishcells <- function(wa_id,fl,ortho,vhm,RGBI,ortho_split,ortho_list){
   if (!file.exists(paste0("result/",wa_id, "/pics/pic_",fl$ID,".jpg"))){
-    ext <- extent(fl)+20
+    ext_fl <- extent(fl)+20
 
-    if (is.null(intersect(ext,extent(vhm)))){
+    if (is.null(intersect(ext_fl,extent(vhm)))){
       print("Cell not overlapping vhm")
       
     } else {
       
-      vhm_temp <- crop(vhm,ext)
+      vhm_temp <- crop(vhm,ext_fl)
       
       if(sum(vhm_temp[],na.rm=T)>10 & dim(vhm_temp)[1]==dim(vhm_temp)[2] ){ #With areas higher than 21m (BH1)?
         
         if (ortho_split){
           ras_sel <- list()
           for (i in 1:length(ortho_list)){
-            inter <- intersect(ext,ortho_list[[i]])
+            inter <- raster::intersect(ext_fl,ortho_list[[i]])
             if (!is.null(inter))
-              ras_sel <- append(ras_sel,crop(ortho_list[[i]],ext))}
+              ras_sel <- append(ras_sel,crop(ortho_list[[i]],ext_fl))}
           
           if (length(ras_sel)==0){
             print("Cell not overlapping orthophoto")
@@ -55,18 +55,21 @@ clip_fishcells <- function(wa_id,fl,ortho,vhm,RGBI,ortho_split,ortho_list){
             ras <- do.call(mosaic, ras_sel)}
           
         } else {
-            if (is.null(intersect(ext,extent(ortho)))){
-              print("Cell not overlapping orthophoto or VHM")
-              break
-            } else {ras <- crop(ortho,ext)}
-          }
-        
-        
+          if (is.null(terra::intersect(terra::ext(fl)+20,terra::ext(ortho)))){
+            print("Cell not overlapping orthophoto or VHM")
+            break
+          } else {
+            ras <- terra::crop(ortho,ext_fl)
+            ras <- brick(ras)}
+        }
+
         if (nrow(ras)==ncol(ras)){
+          extent_ras <- extent(ras)
           vhm_temp_01 <- disaggregate(vhm_temp,10)
-          extent(vhm_temp_01) <- extent(ras)
+          extent(vhm_temp_01) <- extent_ras
           origin(vhm_temp_01) <- c(0,0)
           origin(ras) <- c(0,0)
+          
           
           ras <- ras * vhm_temp_01 # cut out areas with height < 21m
           
@@ -80,12 +83,6 @@ clip_fishcells <- function(wa_id,fl,ortho,vhm,RGBI,ortho_split,ortho_list){
     }
   }
 }
-
-
-
-
-
-
 
 
 

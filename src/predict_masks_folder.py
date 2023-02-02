@@ -31,7 +31,7 @@ if __name__== "__main__":
         if pic_id in pics_done:
             print(pic_id + " done")
         else:
-            #try:
+            try:
                 im_fname = utils.download(r'temp.jpg',
                             path= path.join(wd, 'result', str(folder_id), 'pics/pic_' + str(pic_id) + '.jpg'))
 
@@ -49,8 +49,8 @@ if __name__== "__main__":
                     mask_img = Image.fromarray(masks[i])
                     img_name = path.join(wd, 'result', str(folder_id), 'masks/mask_' + str(pic_id) + "_" + str(i) + ".png")
                     mask_img.save(img_name)
-            #except Exception:
-            #   print(file + " failed")
+            except Exception:
+               print(file + " failed")
 
 
 
