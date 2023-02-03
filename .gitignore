@@ -1,8 +1,8 @@
 /wd
 /temp
 /result/*
-!/result/604_precomputed
-!/result/627_precomputed
+!/result/1_precomputed
+!/result/2_precomputed
 /src/mobilenet
 /src/resnet
 /src/config.R
