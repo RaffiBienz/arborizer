@@ -38,7 +38,7 @@ git clone https://github.com/RaffiBienz/arborizer.git
 ```
 Download example data and put it in the data folder: https://drive.google.com/file/d/1VJGAITIG_-k09earWOdKSjAnBkIJNyoO/view?usp=sharing
 
-Download parameters for the neural networks and put the two folders in the src folder: https://drive.google.com/file/d/1sSN48YJ6Prjyg_sxfGq5fi22aMJGzagQ/view?usp=sharing
+Download parameters for the neural networks and put the two folders in the src folder: https://drive.google.com/file/d/1KNfZpznJMOB9c8DNh1U-JT9gnzEsU3dw/view?usp=sharing
 
 
 ### Setup Python
