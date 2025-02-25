@@ -1,4 +1,5 @@
-mxnet==1.5.0
 gluoncv==0.4.0
-numpy
-Pillow
+numpy==1.23.5
+mxnet==1.8.0
+tensorflow==2.17.0
+keras==3.5.0

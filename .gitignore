@@ -1,12 +1,5 @@
-/wd
-/temp
-/result/*
-!/result/1_precomputed
-!/result/2_precomputed
-/src/mobilenet
-/src/resnet
-/src/config.R
-/src/configs
-/data/*
-!/data/link_to _example_data.txt
-.Rhistory
+Arborizer.qgz
+temp
+wd
+results
+src/config.R

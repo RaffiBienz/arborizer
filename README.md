@@ -1,34 +1,35 @@
-# Tree species segmentation and classification algorithm for SwissimageRS 2018 (Swisstopo)
-Created by Raffael Bienz
+# Tree species segmentation and classification algorithm for SwissimageRS (swisstopo)
+Algorithm for tree crown segmentation and tree species classification based on orthophotos. Originally devoloped for the canton of Aargau. Updated and improved for the canton of Fribourg. 
 
-The example orthophoto (test_area.tif) was kindly provided by Federal Office of Topography swisstopo (©swisstopo).
+Developed by [Waldfride Analytics](https://waldfride-analytics.ch/).
 
-The other example data was kindly provided by the Kanton of Aargau.
+The orthophoto example (ortho_example.tif) was kindly provided by Federal Office of Topography swisstopo (©swisstopo). The other data examples were kindly provided by the canton of Fribourg.
+
+![](example.png)
 
 ## Algorithms
 Two different neural networks are used: One for the segmentation of the tree crowns and one for the classification of the segmented crowns by tree species.
 
 ### Tree crown segmentation
 - Model: resnet50_v1b pretrained on the coco dataset. 
-- To train the model, crowns were manually segmented for 320 plots.
+- In 320 plots crowns were manually segmented to train the model
 
-### Tree crown classification
-- Model: mobilenet1.0 pretrained on ImageNet.
-- To train the model, data from 3850 trees were collected in the field.
-- The following groups of tree species are distinguished:
-    - Ahorne (Acer spp.)
-    - Buche (Fagus sylvatica)
-    - Douglasie (Pseudotsuga menziesii)
-    - Eichen (Querqus robur + petraea)
-    - Gemeine Esche (Fraxinus excelsior)
-    - Fichte (Picea abies)
-    - Waldföhre (Pinus sylvestris)
-    - Kirschen (Prunus avium + padus)
-    - Lärche (Larix decidua)
-    - Linden (Tilia cordata + platyphyllos)
-    - Tanne (Abies alba)
-    - Übriges Laubholz
-    - Übriges Nadelholz
+### Tree species classification
+- Model: MobileNetV2
+- Data about 5300 trees was collected in the field to train the model.
+- The following classes are distinguished:
+    - Maple (Acer spp.)
+    - Beech (Fagus sylvatica)
+    - Oak (Querqus robur + petraea)
+    - Ash (Fraxinus excelsior)
+    - Spruce (Picea abies)
+    - Scots Pine (Pinus sylvestris)
+    - Larch (Larix decidua)
+    - Fir (Abies alba)
+    - Other hardwood
+    - Other coniferous wood (e.g. Douglas)
+    - Dead trees
+    - Faulty crown segmentations
 
 ## Usage
 
@@ -36,41 +37,41 @@ Two different neural networks are used: One for the segmentation of the tree cro
 ```
 git clone https://github.com/RaffiBienz/arborizer.git
 ```
-Download example data and put it in the data folder: https://drive.google.com/file/d/1VJGAITIG_-k09earWOdKSjAnBkIJNyoO/view?usp=sharing
+Download example data and put it in the data folder: https://drive.google.com/file/d/1hIGiLyLD02LVT8qnlZwNdryt5aRrL02i/view?usp=sharing
 
-Download parameters for the neural networks and put the two folders in the src folder: https://drive.google.com/file/d/1KNfZpznJMOB9c8DNh1U-JT9gnzEsU3dw/view?usp=sharing
-
+Download parameters for the neural networks and put the two folders into the src folder: https://drive.google.com/file/d/183a-_vfWNVwEIEZBtWhVCnvNvpxNZ1lb/view?usp=sharing
 
 ### Setup Python
-- Install Python 3.6.7 (https://www.python.org/ftp/python/3.6.7/python-3.6.7-amd64.exe). On Windows higher versions cause problems. On Linux higher versions work.
+- Install Python 3.10.12
 - Open config_template.R and save as config.R.
-- Add the path to the python or an anaconda environment in config.R. If python is defined as a environment variable just type "pyhton" in config.R.
-- Install packages mxnet (1.5.0) and gluoncv (0.4.0) -> see requirements.txt
-- If a suitable GPU is available and the CUDA-environemnt is installed, instance segmentation should automatically use the GPU. Otherwise the CPU is used, which is much slower. If problems occur, set ctx=[mx.cpu(0)] in predict_masks_folder.py (line 13) manually.
+- Add the path to the python or an anaconda environment in config.R. If python is defined as an environment variable just type "python" in config.R.
+- Install packages (see requirements.txt)
+- If a suitable GPU is available and the CUDA-environemnt is installed instance segmentation should automatically use the GPU. Otherwise the CPU is used which makes the process much slower. 
 
 **Example setup with Anaconda**
 
-Open Anaconda Powershell Prompt and type:
+Open Anaconda Powershell Prompt and type (to use with GPU see [below](#a-word-on-gpu-usage)):
 ```
-conda create -y -n arborizer python==3.6.7
+conda create -y -n arborizer python==3.10.12
 conda activate arborizer
-pip install -r .\requirements.txt
+pip install gluoncv==0.4.0
+pip install numpy==1.23.5
+pip install mxnet -f https://dist.mxnet.io/python/cpu
+pip install tensorflow==2.17.0
+pip install keras==3.5.0
 ```
-Open config_template.R, save as config.R and add the path to the conda environment in config.R. Typically: C:/Users/USERNAME/.conda/envs/arborizer/python.exe
+Add the path to the python or an anaconda environment in config.R. Typically (Windows): C:/Users/USERNAME/.conda/envs/arborizer/python.exe
 
 ### Setup R
 - Install R and if desired RStudio.
-- Required packages: rgdal, rgeos, raster, imager, doParallel, foreach, sf (see install_packages.R)
-- These packages are installed automatically when you run main.R.
+- Required packages: terra, sf and imager (see install_packages.R)
+- These packages are automatically installed when you run main.R.
 
-### Docker
-Alternatively to the above setup you can also use the Dockerfile provided.
 
-### Required data
+### Required input data
 - Swissiamge RS (10x10 cm / RGBI or IRGB / Federal Office of Topography swisstopo) with trees in leaf.
-- Vegetation height model (1x1m / raster) where areas >= 21 m = 1 and areas < 21 m = 0 (model works only for tall trees, areas < 21 m are excluded from calculations).
+- Vegetation height model (1x1m / raster) 
 - Forest delineation (shapefile)
-- Fishnet of the area (30x30 m / shapefile). This can be generated with main.R based on the forest delineation (set new_fishnet = True in config.R)
 
 ### Execute script
 - If desired, adjust further settings in config.R (at least python_path, see Setup Python).
@@ -79,14 +80,30 @@ Alternatively to the above setup you can also use the Dockerfile provided.
 - Check the result folder for the output.
 
 ## Performance
-Segmentation achieved a mean average precision of 30.9 on the validation dataset. Evergreen trees are not detected as well as deciduous trees. This may be due to the relatively small crowns of evergreen trees. Regaring deciduous trees, the algorithm has the tendency to conjoin the crowns of multiple trees.
+Segmentation achieved a mean average precision of 30.9 on the validation dataset. Coniferous trees are not detected as well as deciduous trees. This may be due to the relatively small crowns of coniferous trees. Regarding deciduous trees, the algorithm has the tendency to conjoin the crowns of multiple trees.
 
-Classification achieved an accuracy of 86 % on the validation dataset. However, the algorithm works better for evergreen trees than for deciduous trees.
+Classification achieved an accuracy of 84 % on the test dataset. However, the algorithm works better for coniferous trees than for deciduous trees.
 
+## A word on GPU usage
+This is quite a tricky part. The CPU is sufficient for test purposes. For larger areas, however, it is essential to use a GPU or you will be waiting for results for ages (months). In particular for the step of tree crown segementation you will need a GPU up and running. Tree species classification can be carried out on the CPU in a reasonable amount of time.
 
-![](example.png)
+To set up the GPU to run with the gluoncv framework you need the right combination of graphics card, driver, CUDA version, python version and package versions. I used the following setup:
+- GPU: NVIDIA GeForce RTX 3090
+- Driver version: 555.99
+- CUDA version: 11.2
+- Python version 3.6.7
+- Package versions: mxnet-cu101==1.5.0 / gluoncv==0.4.0
+
+An instruction on how to set up the CUDA environment can be found here: https://tech.stdl.ch/PROJ-HETRES/#73-reproducibility-of-the-exploratory-project-with-data-produced-by-swisstopo
 
 ## Change Log
+
+### Update December 2024 ###
+- Basic revision of the scripts.
+- Removed dependency on raster and sp packages. Now works with terra and sf.
+- Updated tree species classification model to MobileNetV2.
+- Trained tree species classification model on data of the canton of Fribourg.
+
 ### Update January 2023
 The model was improved as follows:
 - New tree crown segmentation model trained with more data.
@@ -94,3 +111,5 @@ The model was improved as follows:
 - Improved overlap cleanup.
 - Faster export of tree images.
 - Due to poor classification accuracy Quercus rubra was integrated into the class "Other deciduous trees".
+
+
