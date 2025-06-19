@@ -41,7 +41,7 @@ fishnet <- read_sf(path_fishnet)
 path_vhm_mask <- "wd/vhm_mask.tif"
 if (!file.exists(path_vhm_mask)){
   vhm <- rast(path_vhm)
-  recl <- matrix(c(vhm@ptr@.xData$range_min, vhm_height_threshold, 0, vhm_height_threshold, vhm@ptr@.xData$range_max, 1), ncol = 3, byrow = T)
+  recl <- matrix(c(-Inf, vhm_height_threshold, 0, vhm_height_threshold, Inf, 1), ncol = 3, byrow = T)
   vhm_recl <- classify(vhm, recl)
   vhm_foc <- terra::focal(vhm_recl,w=11,fun=mean) # Mean+reclassification is much faster than modal
   recl <- matrix(c(0,0.1,0,0.1,1,1),ncol=3, byrow=T)
@@ -54,6 +54,7 @@ vhm <- rast(path_vhm_mask)
 path_fd_prep <- "wd/forest_delineation.shp"
 if (!file.exists(path_fd_prep)){
   wa <- read_sf(path_forest_delination)
+  wa <- wa[,!names(wa) %in% c("id", "Id", "ID")]
   wa <- wa[as.numeric(st_area(wa))>100,]
   wa$Id <- 1:nrow(wa)
   wa <- st_zm(wa) # drop Z dimension
